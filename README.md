@@ -1,24 +1,26 @@
 # Crappy Childhood Fairy — Redesign Concept
 
-Independent redesign concept created as a UX/UI exploration.
+Independent responsive redesign concept, based on the supplied cream, plum, and gold mobile reference. This is not the official Crappy Childhood Fairy website.
 
-## Direction
+## Preview
 
-The concept is intentionally mobile-first and focuses on:
-- a shorter, calmer homepage
-- clearer pathways for new visitors
-- persistent access to the Daily Practice, books and 8-week intensive
-- a warmer, more cohesive visual system
-- a prototype “Write to Anna” experience with a 2,000-character limit
-- responsive desktop and mobile layouts
+Open `index.html` directly, or serve this folder with `python3 -m http.server 8000` and visit `http://localhost:8000`. No build or package installation is needed.
+
+## Visitor pathways
+
+- **Understand what’s happening:** existing free resources.
+- **Try something today:** the free Daily Practice course.
+- **Find deeper support:** a concise overview of courses, membership, and webinars, with an additional link to the 8-week intensive.
+
+Books, Anna’s story, and the original letter-drafting prototype remain available. The letter form does not transmit or store data; the official contact page is linked beside it.
 
 ## Files
 
-- `index.html` — single homepage
-- `styles.css` — complete responsive styling
-- `script.js` — mobile menu + letter counter/prototype form
+- `index.html` — page content and existing official resource links.
+- `styles.css` — responsive cream, plum, and gold design; mobile layout and reduced-motion support.
+- `script.js` — accessible mobile menu dismissal and prototype letter counter.
+- `assets/anna-hero.png`, `assets/anna-about.png` — user-supplied portraits.
 
-## Important
+Book graphics are decorative title illustrations, not reproductions of published covers. The attributed testimonial excerpt comes from the current official homepage. Program descriptions avoid dates and prices so the destination pages remain the source for availability.
 
-This is an independent concept and is not affiliated with or endorsed by Crappy Childhood Fairy.
-The portrait blocks are deliberate placeholders until a final Anna Runkle image is selected.
+Updating this repository does not replace the existing official website or configure hosting.

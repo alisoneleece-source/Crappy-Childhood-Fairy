@@ -33,3 +33,17 @@ if (form && status) {
     status.textContent = 'Prototype only — nothing was sent or stored.';
   });
 }
+// Keep keyboard navigation predictable when the mobile menu is dismissed.
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav?.classList.contains('is-open')) {
+    nav.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.focus();
+  }
+});
+window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
+  if (event.matches) {
+    nav.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
+});

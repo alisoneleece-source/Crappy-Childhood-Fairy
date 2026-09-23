@@ -45,16 +45,101 @@
       </div>
     </div>
     <a href="about-anna.html">About Anna</a>
-    <a href="write-to-anna.html">Write to Anna</a>
+    <a href="write-to-anna.html" aria-current="page">Write to Anna</a>
   </nav>
-</header><main id="main" class="inner-main"><section class="page-hero section-shell"><p class="eyebrow">Write to Anna</p><h1>Tell Anna what matters most.</h1><p class="page-lede">A focused place to share a concise story or question with Anna’s team.</p></section><section class="soft-section"><div class="section-shell narrow"><form class="letter-card" id="letter-form"><label>Name<input type="text" name="name" placeholder="Your name"></label><label>Email<input type="email" name="email" placeholder="you@example.com"></label><label>Your message<textarea id="letter" name="letter" maxlength="2000" placeholder="What would you most like Anna to know?"></textarea></label><div class="letter-meta"><span id="character-count">0 / 2000 characters</span><span>Keep it focused so the heart of your message is easy to find.</span></div><button class="btn btn-primary" type="submit">Preview submission</button><p id="form-status" class="form-status" role="status"></p></form><p class="prototype-note">Prototype only. This form does not send or store submissions.</p></div></section></main>
+</header>
+
+<main id="main" class="inner-main letter-page">
+  <section class="page-hero section-shell letter-hero">
+    <div>
+      <p class="eyebrow">Ask the Fairy</p>
+      <h1>Write to Anna</h1>
+      <p class="page-lede">Have a question you’d like Anna to answer? Keep it focused, protect your privacy, and tell her what you most want help understanding.</p>
+    </div>
+    <aside class="letter-note">
+      <strong>A quick note</strong>
+      <p>Anna is not a doctor or therapist. Her answers and content are for informational purposes and are not a substitute for professional care.</p>
+    </aside>
+  </section>
+
+  <section class="soft-section">
+    <div class="section-shell letter-layout">
+      <aside class="letter-guidelines">
+        <p class="eyebrow">Before you write</p>
+        <h2>What makes a strong letter?</h2>
+        <ol class="guideline-list">
+          <li><strong>Start with your question.</strong><span>Lead with the thing you want Anna to answer.</span></li>
+          <li><strong>Keep it concise.</strong><span>Anna currently asks for letters of about 1,000 words or less.</span></li>
+          <li><strong>Add only the context that helps.</strong><span>A little background is useful; a full history is usually not needed.</span></li>
+          <li><strong>Protect everyone’s privacy.</strong><span>Remove identifying details about yourself and other people.</span></li>
+          <li><strong>Skip graphic detail.</strong><span>Please do not include graphic descriptions of sex, violence, or abuse.</span></li>
+          <li><strong>Choose a broadly useful question.</strong><span>Topics that may help many viewers are more likely to be selected.</span></li>
+        </ol>
+        <p class="small-note">Only a small percentage of letters are chosen for Anna to answer publicly.</p>
+      </aside>
+
+      <form class="letter-card letter-form-large" id="letter-form">
+        <div class="field-row">
+          <label>
+            Your name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+        </div>
+
+        <label>
+          Your question
+          <input type="text" name="question" required placeholder="What would you like Anna to answer?">
+        </label>
+
+        <label>
+          Your letter
+          <textarea id="letter" name="letter" required placeholder="Add the context Anna needs to understand your question."></textarea>
+        </label>
+
+        <div class="letter-meta">
+          <strong id="word-count">0 / 1000 words</strong>
+          <span>Shorter is absolutely fine.</span>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" name="privacy" required>
+          <span>I have removed identifying details about myself and other people mentioned in my letter.</span>
+        </label>
+
+        <label class="check-row">
+          <input type="checkbox" name="consent" required>
+          <span>I give Anna Runkle permission to read and respond to my letter on her YouTube channel and in other Crappy Childhood Fairy media.</span>
+        </label>
+
+        <label>
+          Full name for consent
+          <input type="text" name="consent-name" required placeholder="Type your full name">
+        </label>
+
+        <button class="btn btn-primary" type="submit">Preview submission</button>
+        <p id="form-status" class="form-status" role="status"></p>
+        <p class="prototype-note">Prototype only. This form does not send or store submissions.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
 <footer class="site-footer">
   <div class="section-shell footer-layout">
     <div class="footer-brand"><img src="CrappyChildhoodFairy.png" alt="" class="footer-logo"><p>Independent redesign concept.</p></div>
     <div class="footer-links">
-      <a href="daily-practice.html">Daily Practice</a><a href="courses.html">Courses</a><a href="books.html">Books</a><a href="membership.html">Membership</a>
+      <a href="daily-practice.html">Daily Practice</a>
+      <a href="courses.html">Courses</a>
+      <a href="books.html">Books</a>
+      <a href="membership.html">Membership</a>
     </div>
   </div>
 </footer>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>

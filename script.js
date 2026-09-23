@@ -19,10 +19,22 @@ if (menuButton && nav) {
   });
 }
 
-if (letter && counter) {
+if (letter) {
+  const charCounter = document.querySelector('#character-count');
+  const wordCounter = document.querySelector('#word-count');
+
   const updateCount = () => {
-    counter.textContent = `${letter.value.length} / 2000 characters`;
+    if (charCounter) {
+      charCounter.textContent = `${letter.value.length} / 2000 characters`;
+    }
+
+    if (wordCounter) {
+      const words = letter.value.trim() ? letter.value.trim().split(/\s+/).length : 0;
+      wordCounter.textContent = `${words} / 1000 words`;
+      wordCounter.classList.toggle('is-over', words > 1000);
+    }
   };
+
   letter.addEventListener('input', updateCount);
   updateCount();
 }
@@ -76,3 +88,16 @@ document.addEventListener('click', () => {
 document.querySelectorAll('.nav-dropdown').forEach(menu => {
   menu.addEventListener('click', event => event.stopPropagation());
 });
+
+
+// Prevent the prototype letter form from accepting more than 1000 words.
+if (form && letter) {
+  form.addEventListener('submit', event => {
+    const words = letter.value.trim() ? letter.value.trim().split(/\s+/).length : 0;
+    if (words > 1000) {
+      event.preventDefault();
+      status.textContent = 'Please shorten your letter to 1,000 words or less.';
+      letter.focus();
+    }
+  });
+}

@@ -47,3 +47,32 @@ window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
     menuButton.setAttribute('aria-expanded', 'false');
   }
 });
+
+
+// Accessible dropdown navigation.
+document.querySelectorAll('.nav-parent').forEach(button => {
+  button.addEventListener('click', event => {
+    event.stopPropagation();
+    const group = button.closest('.nav-group');
+    const willOpen = !group.classList.contains('is-open');
+
+    document.querySelectorAll('.nav-group.is-open').forEach(openGroup => {
+      openGroup.classList.remove('is-open');
+      openGroup.querySelector('.nav-parent')?.setAttribute('aria-expanded', 'false');
+    });
+
+    group.classList.toggle('is-open', willOpen);
+    button.setAttribute('aria-expanded', String(willOpen));
+  });
+});
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-group.is-open').forEach(group => {
+    group.classList.remove('is-open');
+    group.querySelector('.nav-parent')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.querySelectorAll('.nav-dropdown').forEach(menu => {
+  menu.addEventListener('click', event => event.stopPropagation());
+});

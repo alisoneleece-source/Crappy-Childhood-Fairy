@@ -94,10 +94,17 @@ document.querySelectorAll('.nav-dropdown').forEach(menu => {
 if (form && letter) {
   form.addEventListener('submit', event => {
     const words = letter.value.trim() ? letter.value.trim().split(/\s+/).length : 0;
-    if (words > 1000) {
+
+    if (words < 500 || words > 1000) {
       event.preventDefault();
-      status.textContent = 'Please shorten your letter to 1,000 words or less.';
+      status.textContent = words < 500
+        ? 'Your letter is currently under 500 words. Anna asks for 500–1,000 words.'
+        : 'Please shorten your letter to 1,000 words or less.';
       letter.focus();
+      return;
     }
+
+    event.preventDefault();
+    status.textContent = 'Your letter is within the 500–1,000 word range. Use the official form link to send it to Anna’s team.';
   });
 }

@@ -1,29 +1,26 @@
-# Crappy Childhood Fairy — Portfolio Concept
+# Crappy Childhood Fairy — Redesign Concept
 
-`index.html` is the single canonical homepage. This independent concept is not the official website.
+Independent responsive redesign concept, based on the supplied cream, plum, and gold mobile reference. This is not the official Crappy Childhood Fairy website.
 
 ## Preview
 
-Serve this directory with `python3 -m http.server 8000`, then open `http://localhost:8000/`. No build step is required.
+Open `index.html` directly, or serve this folder with `python3 -m http.server 8000` and visit `http://localhost:8000`. No build or package installation is needed.
 
-## Homepage foundation
+## Visitor pathways
 
-- The exact uploaded `CrappyChildhoodFairy.png` is used unchanged, scaled proportionally with CSS.
-- `assets/anna-hero.png` is the supplied real portrait.
-- Three evergreen “Pick your path” cards lead to Daily Practice, Quizzes, and Courses.
-- Three separate “Latest & Featured” slots are configured in `homepageFeatures` in `script.js`. Edit each item's `title`, `href`, and `cta`; optionally add `description` and `image: { src, alt }`. The current examples contain no event dates or availability claims. Keep the noscript fallback in `index.html` synchronized when changing the examples.
-- Books, Write to Anna, and the footer have restrained reserved areas for later content.
+- **Understand what’s happening:** existing free resources.
+- **Try something today:** the free Daily Practice course.
+- **Find deeper support:** a concise overview of courses, membership, and webinars, with an additional link to the 8-week intensive.
 
-## Shared files and existing pages
+Books, Anna’s story, and the original letter-drafting prototype remain available. The letter form does not transmit or store data; the official contact page is linked beside it.
 
-- `styles.css`: shared baseline and scoped homepage foundation.
-- `inner-pages.css`: retained destination-page styles and shared responsive navigation.
-- `script.js`: disclosure navigation, feature rendering, and the retained letter prototype.
-- Existing destination pages remain in place; no alternate homepage has been created. Their shared headers use the same menu. A code comment reserves the future Retreats navigation item.
-- Existing book covers and Anna portraits remain available, unchanged.
+## Files
 
-## Navigation
+- `index.html` — page content and existing official resource links.
+- `styles.css` — responsive cream, plum, and gold design; mobile layout and reduced-motion support.
+- `script.js` — accessible mobile menu dismissal and prototype letter counter.
+- `assets/anna-hero.png`, `assets/anna-about.png` — user-supplied portraits.
 
-Use Tab to reach links and disclosure buttons. Enter or Space toggles a submenu; Arrow Down opens it and focuses its first link. Escape closes a submenu and restores focus to its trigger. A second Escape closes the mobile menu. Clicking outside, following a link, or crossing the desktop breakpoint closes open menus.
+Book graphics are decorative title illustrations, not reproductions of published covers. The attributed testimonial excerpt comes from the current official homepage. Program descriptions avoid dates and prices so the destination pages remain the source for availability.
 
-The Write to Anna form remains a local prototype; it does not send or store submissions. Updating this repository does not deploy the official website.
+Updating this repository does not replace the existing official website or configure hosting.

@@ -1,89 +1,21 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 const letter = document.querySelector('#letter');
+const counter = document.querySelector('#character-count');
 const form = document.querySelector('#letter-form');
 const status = document.querySelector('#form-status');
-const groups = [...document.querySelectorAll('.nav-group')];
-function closeDropdowns(except) {
-  groups.forEach(group => {
-    if (group === except) return;
-    group.classList.remove('is-open');
-    group.querySelector('.nav-parent').setAttribute('aria-expanded', 'false');
-    group.querySelector('.nav-dropdown').hidden = true;
-  });
-}
-function closeMobile() {
-  nav?.classList.remove('is-open');
-  menuButton?.setAttribute('aria-expanded', 'false');
-  closeDropdowns();
-}
+
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
-    const open = menuButton.getAttribute('aria-expanded') !== 'true';
-    closeDropdowns();
-    nav.classList.toggle('is-open', open);
+    const open = nav.classList.toggle('is-open');
     menuButton.setAttribute('aria-expanded', String(open));
   });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobile));
-  nav.addEventListener('focusout', () => {
-    setTimeout(() => { if (!nav.contains(document.activeElement)) closeDropdowns(); }, 0);
-  });
-}
-groups.forEach(group => {
-  const button = group.querySelector('.nav-parent');
-  const panel = group.querySelector('.nav-dropdown');
-  function open() {
-    closeDropdowns(group);
-    group.classList.add('is-open');
-    button.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-  }
-  button.addEventListener('click', () => {
-    if (button.getAttribute('aria-expanded') === 'true') closeDropdowns();
-    else open();
-  });
-  button.addEventListener('keydown', event => {
-    if (event.key === 'ArrowDown') { event.preventDefault(); open(); panel.querySelector('a').focus(); }
-  });
-});
-document.addEventListener('keydown', event => {
-  if (event.key !== 'Escape') return;
-  const open = groups.find(group => group.classList.contains('is-open'));
-  if (open) { event.preventDefault(); closeDropdowns(); open.querySelector('.nav-parent').focus(); }
-  else if (nav?.classList.contains('is-open')) { closeMobile(); menuButton.focus(); }
-});
-document.addEventListener('click', event => {
-  if (!event.target.closest('.site-header')) closeMobile();
-});
-window.matchMedia('(min-width: 1101px)').addEventListener('change', closeMobile);
 
-// Edit these three slots to update timely homepage promotions.
-// Titles are navigation examples, not assertions of current event availability.
-// Optional image: { src: 'existing-asset.jpg', alt: 'Descriptive alternative text' }.
-const homepageFeatures = [
-  { title: 'Daily Practice Live', href: 'daily-practice-live.html', cta: 'Explore Daily Practice Live' },
-  { title: 'Courses', href: 'courses.html', cta: 'Explore Courses' },
-  { title: 'Webinars', href: 'webinars.html', cta: 'Explore Webinars' }
-];
-const featureGrid = document.querySelector('#homepage-features');
-if (featureGrid) {
-  homepageFeatures.slice(0, 3).forEach(feature => {
-    const article = document.createElement('article');
-    article.className = 'home-feature';
-    if (feature.image) {
-      const image = document.createElement('img');
-      image.src = feature.image.src; image.alt = feature.image.alt; image.loading = 'lazy';
-      article.append(image);
-    }
-    const heading = document.createElement('h3'); heading.textContent = feature.title;
-    article.append(heading);
-    if (feature.description) {
-      const description = document.createElement('p'); description.textContent = feature.description;
-      article.append(description);
-    }
-    const link = document.createElement('a'); link.className = 'text-link';
-    link.href = feature.href; link.textContent = feature.cta;
-    article.append(link); featureGrid.append(article);
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
@@ -113,6 +45,51 @@ if (form && status) {
     status.textContent = 'Prototype only — nothing was sent or stored.';
   });
 }
+// Keep keyboard navigation predictable when the mobile menu is dismissed.
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav?.classList.contains('is-open')) {
+    nav.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.focus();
+  }
+});
+window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
+  if (event.matches) {
+    nav.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
+});
+
+
+// Accessible dropdown navigation.
+document.querySelectorAll('.nav-parent').forEach(button => {
+  button.addEventListener('click', event => {
+    event.stopPropagation();
+    const group = button.closest('.nav-group');
+    const willOpen = !group.classList.contains('is-open');
+
+    document.querySelectorAll('.nav-group.is-open').forEach(openGroup => {
+      openGroup.classList.remove('is-open');
+      openGroup.querySelector('.nav-parent')?.setAttribute('aria-expanded', 'false');
+    });
+
+    group.classList.toggle('is-open', willOpen);
+    button.setAttribute('aria-expanded', String(willOpen));
+  });
+});
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-group.is-open').forEach(group => {
+    group.classList.remove('is-open');
+    group.querySelector('.nav-parent')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.querySelectorAll('.nav-dropdown').forEach(menu => {
+  menu.addEventListener('click', event => event.stopPropagation());
+});
+
+
 // Prevent the prototype letter form from accepting more than 1000 words.
 if (form && letter) {
   form.addEventListener('submit', event => {

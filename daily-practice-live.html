@@ -16,24 +16,53 @@
 <div class="concept-bar">Independent redesign concept · not the official Crappy Childhood Fairy website</div>
 
 <header class="site-header">
-    <a class="brand logo-brand" href="index.html" aria-label="Crappy Childhood Fairy home"><img src="CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" class="site-logo" width="2051" height="767"></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <div class="nav-group">
-        <button class="nav-parent" type="button" aria-expanded="false" aria-controls="tools-menu">Tools &amp; Resources <span aria-hidden="true">▾</span></button>
-        <div class="nav-dropdown" id="tools-menu" hidden><a href="daily-practice.html">The Daily Practice</a><a href="quizzes.html">Quizzes</a><a href="books.html">Books</a></div>
+  <a class="brand logo-brand" href="index.html" aria-label="Crappy Childhood Fairy home">
+    <img src="CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" class="site-logo">
+  </a>
+  
+    <div class="header-socials" aria-label="Follow Crappy Childhood Fairy">
+      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noreferrer" aria-label="YouTube" title="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 2A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8Zm5.3-3.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7h1.9V2.4c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.4H7v3.5h2.9v9h3.8Z"/></svg>
+      </a>
+      <a href="https://x.com/CChildhoodFairy" target="_blank" rel="noreferrer" aria-label="X" title="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H22l-8.3 9.5L23.5 22h-7.7l-6-7.8L3 22H-.8l8.9-10.2L-1.3 2h7.9l5.4 7.1L18.2 2Zm-1.3 18h2.1L5.4 3.9H3.1L16.9 20Z"/></svg>
+      </a>
+    </div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+    <div class="nav-group">
+      <button class="nav-parent" aria-expanded="false">Tools &amp; Resources <span>⌄</span></button>
+      <div class="nav-dropdown">
+        <a href="daily-practice.html">The Daily Practice</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="books.html">Books</a>
       </div>
-      <div class="nav-group">
-        <button class="nav-parent" type="button" aria-expanded="false" aria-controls="courses-menu">Courses &amp; Events <span aria-hidden="true">▾</span></button>
-        <div class="nav-dropdown" id="courses-menu" hidden><a href="daily-practice-live.html">Daily Practice Live</a><a href="courses.html">Courses</a><a href="webinars.html">Webinars</a><!-- Future navigation slot: Retreats. Add when its page is ready. --></div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-parent" aria-expanded="false">Courses &amp; Events <span>⌄</span></button>
+      <div class="nav-dropdown">
+        <a href="daily-practice-live.html">Daily Practice Live</a>
+        <a href="courses.html">Courses</a>
+        <a href="webinars.html">Webinars</a>
       </div>
-      <div class="nav-group">
-        <button class="nav-parent" type="button" aria-expanded="false" aria-controls="membership-menu">Membership <span aria-hidden="true">▾</span></button>
-        <div class="nav-dropdown" id="membership-menu" hidden><a href="membership.html#join">Become a Member</a><a href="membership.html#login">Member Login</a></div>
+    </div>
+    <div class="nav-group">
+      <button class="nav-parent" aria-expanded="false">Membership <span>⌄</span></button>
+      <div class="nav-dropdown">
+        <a href="membership.html#join">Become a Member</a>
+        <a href="membership.html#login">Member Login</a>
       </div>
-      <a href="about-anna.html">About Anna</a><a href="write-to-anna.html">Write to Anna</a>
-    </nav>
-  </header><main id="main" class="inner-main"><section class="page-hero section-shell split-hero"><div><p class="eyebrow">Courses &amp; Events</p><h1>Daily Practice Live</h1><p class="page-lede">Practice together, ask questions, and connect in a live session with Anna.</p><div class="page-actions"><a class="btn btn-primary" href="#">Register for the next call</a></div></div><div class="info-panel"><strong>Live session</strong><p>90 minutes with Anna</p><p>Writing practice + meditation + Q&amp;A</p><p>Recording included</p><p class="price">$9 per call</p></div></section><section class="soft-section"><div class="section-shell narrow"><h2>What to expect</h2><div class="simple-grid"><article><h3>10-minute writing practice</h3></article><article><h3>20-minute meditation</h3></article><article><h3>Questions &amp; discussion</h3></article></div><p class="prototype-note">Dates and registration links can be updated here whenever a new session opens.</p></div></section></main>
+    </div>
+    <a href="about-anna.html">About Anna</a>
+    <a href="write-to-anna.html">Write to Anna</a>
+  </nav>
+</header><main id="main" class="inner-main"><section class="page-hero section-shell split-hero"><div><p class="eyebrow">Courses &amp; Events</p><h1>Daily Practice Live</h1><p class="page-lede">Practice together, ask questions, and connect in a live session with Anna.</p><div class="page-actions"><a class="btn btn-primary" href="#">Register for the next call</a></div></div><div class="info-panel"><strong>Live session</strong><p>90 minutes with Anna</p><p>Writing practice + meditation + Q&amp;A</p><p>Recording included</p><p class="price">$9 per call</p></div></section><section class="soft-section"><div class="section-shell narrow"><h2>What to expect</h2><div class="simple-grid"><article><h3>10-minute writing practice</h3></article><article><h3>20-minute meditation</h3></article><article><h3>Questions &amp; discussion</h3></article></div><p class="prototype-note">Dates and registration links can be updated here whenever a new session opens.</p></div></section></main>
 <footer class="site-footer">
   <div class="section-shell footer-layout">
     <div class="footer-brand"><img src="CrappyChildhoodFairy.png" alt="" class="footer-logo"><p>Independent redesign concept.</p></div>

@@ -1,75 +1,362 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Independent redesign concept for Crappy Childhood Fairy.">
-<title>Quizzes — Crappy Childhood Fairy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="inner-pages.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="concept-bar">Independent redesign concept · not the official Crappy Childhood Fairy website</div>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>html{scroll-behavior:smooth}body{margin:0;background:#fbf7f2;color:#3a0f2e;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{color:#5a1846}input::placeholder{color:#8f7686}:focus-visible{outline:2px solid #c98f1f;outline-offset:3px;border-radius:6px}@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}</style></helmet>
 
-<header class="site-header">
-  <a class="brand logo-brand" href="index.html" aria-label="Crappy Childhood Fairy home">
-    <img src="CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" class="site-logo">
-  </a>
-  
-    <div class="header-socials" aria-label="Follow Crappy Childhood Fairy">
-      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noreferrer" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 2A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8Zm5.3-3.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7h1.9V2.4c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.4H7v3.5h2.9v9h3.8Z"/></svg>
-      </a>
-      <a href="https://x.com/CChildhoodFairy" target="_blank" rel="noreferrer" aria-label="X" title="X">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H22l-8.3 9.5L23.5 22h-7.7l-6-7.8L3 22H-.8l8.9-10.2L-1.3 2h7.9l5.4 7.1L18.2 2Zm-1.3 18h2.1L5.4 3.9H3.1L16.9 20Z"/></svg>
-      </a>
+<header style="{{ headerStyle }}">
+  <sc-if value="{{ barOn }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;height:40px;padding:0 52px;background:#3a0f2e;color:#fbf7f2;font-size:14px">
+      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fbf7f2"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> Daily Practice + Q&amp;A with Anna · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot →</span></span></a>
+      <button onClick="{{ closeBar }}" aria-label="Dismiss" style="position:absolute;right:8px;top:0;width:40px;height:40px;background:none;border:none;color:#dcc6d3;font-size:18px;cursor:pointer">×</button>
     </div>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Tools &amp; Resources <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="daily-practice.html">The Daily Practice</a>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="books.html">Books</a>
+  </sc-if>
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px clamp(16px,4vw,56px)">
+    <a href="index.html" style="display:block;flex:none"><img src="uploads/CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" style="{{ logoStyle }}"></a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav onMouseLeave="{{ closeMenu }}" style="display:flex;gap:6px;font-size:15px;font-weight:500;color:#5e4454">
+        <sc-for list="{{ menus }}" as="m" hint-placeholder-count="4">
+          <div onMouseEnter="{{ m.enter }}" style="position:relative">
+            <div style="{{ m.btnStyle }}">{{ m.label }}<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;left:0;padding-top:8px;z-index:10">
+                <div style="width:280px;display:flex;flex-direction:column;padding:8px;background:#fff;border:1px solid #eadbd8;border-radius:16px;box-shadow:0 12px 32px rgba(58,15,46,.12)">
+                  <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="3">
+                    <a href="{{ it.href }}" style="display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:10px" style-hover="background:#f6eee9">
+                      <span style="font-size:15px;font-weight:600;color:#3a0f2e">{{ it.t }}</span>
+                      <span style="font-size:13px;font-weight:400;color:#7a5f6e">{{ it.d }}</span>
+                    </a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </nav>
+      <div style="display:flex;gap:18px;align-items:center;font-size:15px;font-weight:500;white-space:nowrap;flex:none">
+        <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5e4454">Log in</a>
+        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 20px;border:1.5px solid #3a0f2e;border-radius:999px;color:#3a0f2e">Join</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 18px;border:1.5px solid #3a0f2e;border-radius:999px;font-size:15px;font-weight:600">Join</a>
+        <button onClick="{{ toggleSheet }}" aria-label="Menu" style="width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:none;cursor:pointer;padding:0">
+          <span style="{{ bar1 }}"></span><span style="{{ bar2 }}"></span><span style="{{ bar3 }}"></span>
+        </button>
+      </div>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="{{ sheetStyle }}">
+    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
+      <div style="border-bottom:1px solid #eadbd8">
+        <button onClick="{{ sec.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;background:none;border:none;cursor:pointer;font-family:Newsreader,serif;font-size:26px;color:#3a0f2e;text-align:left">{{ sec.label }}<span style="{{ sec.chev }}">+</span></button>
+        <sc-if value="{{ sec.open }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding:0 0 16px">
+            <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="3">
+              <a href="{{ it.href }}" onClick="{{ closeSheet }}" style="display:flex;flex-direction:column;gap:2px;padding:12px 4px;min-height:44px;box-sizing:border-box">
+                <span style="font-size:17px;font-weight:600">{{ it.t }}</span><span style="font-size:14px;color:#7a5f6e">{{ it.d }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <a href="https://courses.crappychildhoodfairy.com/login" style="padding:20px 4px;font-size:17px;font-weight:600;color:#5e4454">Log in</a>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:14px;padding-top:24px">
+      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;background:#3a0f2e;color:#fbf7f2;border-radius:999px;font-size:16px;font-weight:600"><svg width="24" height="18" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#e2a93b"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#3a0f2e"></path></svg>Watch on YouTube</a>
+      <div style="display:flex;justify-content:center;gap:12px">
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
       </div>
     </div>
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Courses &amp; Events <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="daily-practice-live.html">Daily Practice Live</a>
-        <a href="courses.html">Courses</a>
-        <a href="webinars.html">Webinars</a>
+  </div>
+</sc-if>
+
+<main id="top">
+  <section style="background:linear-gradient(180deg,#fbf7f2 0%,#f7e6d6 60%,#eed3cf 100%);min-height:calc(100vh - 120px)">
+    <div style="max-width:1280px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;padding:clamp(32px,6vw,72px) clamp(16px,4vw,56px) clamp(56px,8vw,96px)">
+
+      <sc-if value="{{ qIntro }}" hint-placeholder-val="{{ true }}">
+        <div style="width:100%;max-width:760px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;padding:clamp(28px,5vw,56px);background:#fff;border:1px solid #eadbd8;border-radius:24px;box-shadow:0 24px 60px rgba(58,15,46,.08);text-align:center;align-items:center">
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e"><span style="width:40px;height:1px;background:#c98f1f"></span>Free · 3 minutes · private<span style="width:40px;height:1px;background:#c98f1f"></span></div>
+          <h1 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(38px,5.4vw,60px);line-height:1.05;letter-spacing:-.02em;color:#4a1238;text-wrap:balance">Is PTSD from childhood affecting you today?</h1>
+          <p style="margin:0;max-width:540px;font-size:clamp(17px,2vw,19px);line-height:1.55;color:#5e4454;text-wrap:pretty">Twenty yes-or-no questions about how you think, feel and relate to people. These symptoms are significantly more common in people who experienced trauma as a child. There are no right answers.</p>
+          <button onClick="{{ qStart }}" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 28px;border:none;background:#5a1846;color:#fff;border-radius:999px;font:600 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#4a1238;transform:translateY(-1px);box-shadow:0 8px 20px rgba(58,15,46,.18)">Start the quiz →</button>
+          <span style="font-size:13px;line-height:1.5;color:#7a5f6e;max-width:480px">No score can be relied on for diagnosis — the questions may simply help you consider whether early trauma has affected you.</span>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ qAsking }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;max-width:760px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;padding:clamp(28px,5vw,56px);background:#fff;border:1px solid #eadbd8;border-radius:24px;box-shadow:0 24px 60px rgba(58,15,46,.08)">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#7a5f6e"><span><span style="font-family:Newsreader,serif;font-style:italic;font-size:18px;color:#a06c12">{{ qNum }}</span> of {{ qTotal }}</span><button onClick="{{ qBack }}" style="background:none;border:none;padding:8px 0;font:500 14px Figtree,system-ui,sans-serif;color:#5e4454;cursor:pointer;min-height:44px">← Back</button></div>
+            <div style="height:4px;border-radius:4px;background:#f1e6e2;overflow:hidden"><div style="{{ qBar }}"></div></div>
+          </div>
+          <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(28px,3.8vw,40px);line-height:1.2;color:#3a0f2e;text-wrap:pretty;min-height:2.4em">{{ qText }}</h2>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ qOptions }}" as="o" hint-placeholder-count="3">
+              <button onClick="{{ o.pick }}" style="{{ o.style }}" style-hover="border-color:#5a1846;background:#fbf7f2"><span>{{ o.label }}</span><span style="{{ o.dot }}"></span></button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ qGate }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;max-width:760px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;padding:clamp(28px,5vw,56px);background:#fff;border:1px solid #eadbd8;border-radius:24px;box-shadow:0 24px 60px rgba(58,15,46,.08);text-align:center;align-items:center">
+          <div style="width:64px;height:64px;border-radius:50%;background:#f6eee9;display:flex;align-items:center;justify-content:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 21 L14.5 9.5" stroke="#c98f1f" stroke-width="1.6" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="#c98f1f"></path></svg></div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e"><span style="width:40px;height:1px;background:#c98f1f"></span>Your results are ready<span style="width:40px;height:1px;background:#c98f1f"></span></div>
+          <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.1;color:#4a1238;text-wrap:balance">Where should we send them?</h2>
+          <p style="margin:0;max-width:500px;font-size:17px;line-height:1.55;color:#5e4454">You’ll see your results right away, plus a copy by email with a short guide to what they mean.</p>
+          <form onSubmit="{{ qSubmit }}" style="width:100%;max-width:460px;display:flex;flex-direction:column;gap:10px">
+            <input type="text" placeholder="First name (optional)" value="{{ qName }}" onChange="{{ qSetName }}" style="height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid #d9c4cf;background:#fff;color:#3a0f2e;font:500 16px Figtree,system-ui,sans-serif;outline:none">
+            <input type="email" required="required" placeholder="Your email address" value="{{ qEmail }}" onChange="{{ qSetEmail }}" style="height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid #d9c4cf;background:#fff;color:#3a0f2e;font:500 16px Figtree,system-ui,sans-serif;outline:none">
+            <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 28px;border:none;background:#5a1846;color:#fff;border-radius:999px;font:600 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;height:56px;padding:0 28px" style-hover="background:#4a1238;transform:translateY(-1px);box-shadow:0 8px 20px rgba(58,15,46,.18)">See my results →</button>
+          </form>
+          <span style="font-size:12px;line-height:1.5;color:#7a5f6e;max-width:420px">You’ll get your results plus a few notes from Anna. She promises not to flood your inbox or share your email.</span>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ qResult }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;max-width:760px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;padding:clamp(28px,5vw,56px);background:#fff;border:1px solid #eadbd8;border-radius:24px;box-shadow:0 24px 60px rgba(58,15,46,.08)">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e">{{ rGreeting }}</div>
+            <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.08;color:#4a1238;text-wrap:balance">{{ rTitle }}</h2>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+              <sc-for list="{{ rSegs }}" as="s" hint-placeholder-count="3"><div style="{{ s.style }}"></div></sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:13px;color:#7a5f6e"><span>Few signs</span><span style="text-align:center">Some signs</span><span style="text-align:right">Many signs</span></div>
+          </div>
+          <p style="margin:0;font-size:18px;line-height:1.6;color:#5e4454;text-wrap:pretty">{{ rBody }}</p>
+          <div style="display:flex;flex-direction:column;gap:16px;padding:clamp(22px,3vw,30px);background:linear-gradient(120deg,#f7e6d6 0%,#f1dcd6 55%,#e7d2dc 100%);border-radius:18px">
+            <sc-if value="{{ rGift }}" hint-placeholder-val="{{ false }}">
+              <div style="align-self:flex-start;display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:#3a0f2e;color:#f3d9a4;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">✦ A gift for taking the quiz · 19% off</div>
+            </sc-if>
+            <div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between">
+              <div style="display:flex;flex-direction:column;gap:6px;flex:1 1 280px">
+                <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a5a0e">Your next step</div>
+                <div style="font-family:Newsreader,serif;font-size:26px;line-height:1.15;color:#3a0f2e">{{ rNextTitle }}</div>
+                <div style="font-size:15px;line-height:1.5;color:#5e4454">{{ rNextBody }}</div>
+                <sc-if value="{{ rGift }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;align-items:baseline;gap:10px;margin-top:4px"><span style="font-family:Newsreader,serif;font-size:28px;color:#3a0f2e">$185</span><span style="font-size:16px;color:#7a5f6e;text-decoration:line-through">$229</span><span style="font-size:13px;color:#5e4454">· limited time</span></div>
+                </sc-if>
+              </div>
+              <a href="{{ rNextHref }}" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 28px;border:none;background:#5a1846;color:#fff;border-radius:999px;font:600 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;white-space:nowrap" style-hover="background:#4a1238;transform:translateY(-1px);box-shadow:0 8px 20px rgba(58,15,46,.18)">{{ rNextCta }} →</a>
+            </div>
+            <sc-if value="{{ rGift }}" hint-placeholder-val="{{ false }}">
+              <a href="daily-practice.html" style="padding-top:14px;border-top:1px solid rgba(58,15,46,.1);font-size:15px;color:#5a1846;font-weight:600">Prefer to start free? Try the Daily Practice →</a>
+            </sc-if>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-top:6px">
+            <button onClick="{{ openVideo }}" style="display:flex;align-items:center;gap:10px;background:none;border:none;padding:8px 0;font:600 15px Figtree,system-ui,sans-serif;color:#5a1846;cursor:pointer;min-height:44px"><span style="width:28px;height:28px;border-radius:50%;background:#e2a93b;color:#3a0f2e;display:flex;align-items:center;justify-content:center;font-size:10px">▶</span>Watch Anna explain Childhood PTSD</button>
+            <button onClick="{{ qRestart }}" style="background:none;border:none;padding:8px 0;font:500 14px Figtree,system-ui,sans-serif;color:#7a5f6e;cursor:pointer;min-height:44px;text-decoration:underline;text-underline-offset:3px">Retake the quiz</button>
+          </div>
+          <p style="margin:0;padding-top:18px;border-top:1px solid #f1e6e2;font-size:13px;line-height:1.55;color:#7a5f6e">This self-check is for education only and isn’t a diagnosis. If you’re struggling, please reach out to a mental-health professional. In crisis? Call or text <b style="color:#3a0f2e">988</b> (US).</p>
+        </div>
+      </sc-if>
+
+    </div>
+  </section>
+</main>
+
+<sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeVideo }}" style="position:fixed;inset:0;z-index:100;background:rgba(30,8,24,.82);display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,48px)">
+    <div onClick="{{ stop }}" style="width:100%;max-width:980px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;color:#fbf7f2">
+        <span style="font-family:Newsreader,serif;font-size:clamp(20px,2.4vw,26px)">How I healed from a crappy childhood</span>
+        <button onClick="{{ closeVideo }}" aria-label="Close video" style="width:44px;height:44px;flex:none;border-radius:50%;border:1.5px solid rgba(251,247,242,.4);background:transparent;color:#fbf7f2;font-size:20px;cursor:pointer">×</button>
+      </div>
+      <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000">
+        <iframe src="https://www.youtube-nocookie.com/embed/K_46GEbc9WY?autoplay=1&amp;rel=0&amp;modestbranding=1" title="Anna’s story" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen="allowfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
+        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start →</a>
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#dcc6d3">More videos on YouTube ↗</a>
       </div>
     </div>
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Membership <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="membership.html#join">Become a Member</a>
-        <a href="membership.html#login">Member Login</a>
+  </div>
+</sc-if>
+
+<footer style="background:#3a0f2e;color:#fbf7f2">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,56px);padding:clamp(56px,7vw,80px) clamp(20px,4vw,56px) 32px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e2a93b">The newsletter</div>
+        <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,3.6vw,40px);line-height:1.1">Join 175,000 readers.</h2>
+        <p style="margin:0;font-size:17px;line-height:1.5;color:#dcc6d3;max-width:440px">A short weekly note from Anna with one tool you can use right away.</p>
       </div>
+      <sc-if value="{{ notSubscribed }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ subscribe }}" style="display:flex;flex-wrap:wrap;gap:10px">
+          <input type="email" required="required" placeholder="Your email address" value="{{ email }}" onChange="{{ setEmail }}" style="flex:1 1 240px;min-width:0;height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid rgba(251,247,242,.3);background:rgba(251,247,242,.06);color:#fbf7f2;font:500 16px Figtree,system-ui,sans-serif;outline:none">
+          <button type="submit" style="height:56px;padding:0 28px;border:none;border-radius:999px;background:#e2a93b;color:#3a0f2e;font:700 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Subscribe</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ subscribed }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;gap:14px;min-height:56px;padding:0 24px;border-radius:999px;background:rgba(226,169,59,.14);color:#f3d9a4;font-size:16px;font-weight:600">✦ You’re in. Check your inbox for a welcome note.</div>
+      </sc-if>
     </div>
-    <a href="about-anna.html">About Anna</a>
-    <a href="write-to-anna.html">Write to Anna</a>
-  </nav>
-</header><main id="main" class="inner-main"><section class="page-hero section-shell"><p class="eyebrow">Tools &amp; Resources</p><h1>Quizzes</h1><p class="page-lede">A simple place to explore Anna’s quizzes and find the one that best matches what you want to understand.</p></section><section class="soft-section"><div class="section-shell"><div class="listing-grid"><article class="listing-card"><span class="mini-icon">✦</span><h2>Quiz library</h2><p>The current quizzes can be added here as clean, easy-to-scan cards with a short description and one clear button.</p><a class="text-link" href="https://courses.crappychildhoodfairy.com/free-tools/">Explore current quizzes →</a></article></div></div></section></main>
-<footer class="site-footer">
-  <div class="section-shell footer-layout">
-    <div class="footer-brand"><img src="CrappyChildhoodFairy.png" alt="" class="footer-logo"><p>Independent redesign concept.</p></div>
-    <div class="footer-links">
-      <a href="daily-practice.html">Daily Practice</a><a href="courses.html">Courses</a><a href="books.html">Books</a><a href="membership.html">Membership</a>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid rgba(251,247,242,.14);border-bottom:1px solid rgba(251,247,242,.14)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 14px;border-radius:999px;background:#e2a93b;color:#3a0f2e;font-size:15px;font-weight:700" style-hover="background:#efb84c;transform:translateY(-1px)"><svg width="22" height="16" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#3a0f2e"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#e2a93b"></path></svg>YouTube</a>
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
+      </div>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;font-size:14px;letter-spacing:.02em">
+        <sc-for list="{{ footerLinks }}" as="it" hint-placeholder-count="5">
+          <a href="{{ it.href }}" style="color:#bda3b3;text-decoration:underline;text-decoration-color:rgba(189,163,179,.4);text-underline-offset:4px">{{ it.t }}</a>
+        </sc-for>
+      </nav>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.55;color:#bda3b3">
+      <p style="margin:0;color:#fbf7f2;font-size:14px">In crisis? Call or text <b>988</b> (US) or find a local line at findahelpline.com. Your safety matters.</p>
+      <p style="margin:0">Educational content only — not a substitute for professional care.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:6px">
+        <span>© 2026 Crappy Childhood Fairy</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 22px">
+          <a href="https://courses.crappychildhoodfairy.com/terms-of-service" style="color:#dcc6d3">Terms of Service</a>
+          <a href="https://courses.crappychildhoodfairy.com/privacy-policy" style="color:#dcc6d3">Privacy Policy</a>
+          <a href="https://crappychildhoodfairy.com/disclaimer/" style="color:#dcc6d3">Disclaimer</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
-</body></html>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const C = "https://courses.crappychildhoodfairy.com";
+const MENUS = [
+  { label: "Start here", items: [{ t: "Take the CPTSD quiz", d: "3 minutes, private", href: "quizzes.html" }, { t: "Free Daily Practice", d: "Writing + meditation, free Zoom calls", href: "daily-practice.html" }, { t: "Free tools", d: "Quizzes and worksheets", href: C + "/free-tools" }] },
+  { label: "Learn", items: [{ t: "Courses", d: "Self-paced, from $70", href: "courses.html" }, { t: "Live courses with Anna", d: "Small-group intensives", href: C + "/8w-rr-intensive" }, { t: "Webinars", d: "Monthly, $45 · free for members", href: "webinars.html" }, { t: "Books", d: "Re-Regulated & Connectability", href: "books.html" }, { t: "Videos & blog", d: "Free, new every week", href: "https://www.youtube.com/@crappychildhoodfairy" }] },
+  { label: "Membership", items: [{ t: "What’s included", d: "All courses, Q&A calls, community", href: C + "/membership" }, { t: "Plans & pricing", d: "$49/mo or $399/yr", href: C + "/membership" }] },
+  { label: "About Anna", items: [{ t: "My story", d: "How I healed my Childhood PTSD", href: "about-anna.html" }, { t: "Write to Anna", d: "Questions and contact", href: "write-to-anna.html" }] }
+];
+const PATHS = [
+  { label: "I’m wondering if this is even me", title: "Take the CPTSD quiz", body: "A private 3-minute check of the most common signs that early trauma is affecting you now — with a plain-English explanation of your results.", cta: "Start the quiz", meta: "Free · 3 min", href: "quizzes.html" },
+  { label: "I need some relief, now", title: "Free Daily Practice", body: "The two techniques that changed everything for Anna — daily writing and meditation — plus free group Zoom calls to practice together.", cta: "Enroll free", meta: "Free · Next live session Oct 6", href: "daily-practice.html" },
+  { label: "I’m ready for real support", title: "Membership", body: "Every course, twice-monthly Q&A calls with Anna, and a private community of people doing the same work.", cta: "Become a member", meta: "$49/mo or $399/yr", href: C + "/membership" }
+];
+const SOCIALS = [
+  { name: "YouTube", glyph: "▶", href: "https://www.youtube.com/@crappychildhoodfairy" },
+  { name: "Instagram", glyph: "IG", href: "https://www.instagram.com/crappychildhoodfairy/" },
+  { name: "Facebook", glyph: "f", href: "https://www.facebook.com/CrappyChildhoodFairy/" },
+  { name: "X / Twitter", glyph: "X", href: "https://twitter.com/cchildhoodfairy" }
+];
+const QS = ["Do you struggle with attention, memory or focus?","Have you damaged relationships because of intense emotions, or outbursts of sadness, jealousy or anger when it didn’t seem appropriate?","Have you struggled with depression, anxiety or other mental health problems?","Do you cling to relationships, or avoid them altogether?","Do you have more than your share of conflict with family, friends and co-workers?","Does the fear of abandonment, or of being alone, cause you to stay in negative relationships?","Do you find yourself attracted to unavailable, destructive or abusive people?","Do your relationships have an unusually high amount of arguing, or is there violence?","Do you smoke cigarettes, or use food, alcohol or drugs in an addictive way?","Do you often feel scattered, trying to do a lot of things at once and finishing nothing?","Do you have a tendency to “space out” at odd times?","Do you cling to relationships, even when you’re not in love and not happy with the person?","Do you get clumsy at seemingly random times, tripping over things or dropping things?","Do you have trouble setting boundaries or saying no?","After a big emotional upset, do you sometimes feel nothing?","Do you have unexplained health problems that seem to have no clear cause?","Do you find people so triggering that you avoid social situations?","Do you feel that no matter how much a partner or friend tries to be there for you, you feel alone, unloved or unheard?","Do you feel that you are unexplainably separate from other people and groups?","When you are trying to do something familiar (especially when you’re hurrying or under pressure), do you sometimes get too flustered to function?"];
+const OPTS = ["Yes", "No"];
+const BANDS = [
+  { title: "You’re showing few signs of early-trauma dysregulation.", body: "Your answers suggest the effects of your past aren’t running your life right now. Simple daily tools can still help you stay steady when stress hits — and help you recognize what to watch for.", next: 0 },
+  { title: "You’re showing some signs that your past is affecting you now.", body: "Many people who answer this way have spent years thinking it was “just them.” These patterns are common after a chaotic or neglectful childhood — and they respond well to simple, daily practice.", next: 1 },
+  { title: "You’re showing many signs that early trauma is affecting you now.", body: "That can be hard to read — and it isn’t your fault. These patterns are signs of a dysregulated nervous system, and they can heal. You don’t have to do it alone.", next: 1 }
+];
+const NEXT = [
+  { t: "Start the free Daily Practice", b: "Two simple techniques, about 20 minutes a day, plus free live calls.", cta: "Start free", href: "daily-practice.html", gift: false },
+  { t: "Healing Childhood PTSD", b: "Anna’s foundational course: the science, the symptoms and the strategies that help heal them, through videos and worksheets.", cta: "Claim 19% off", href: "https://courses.crappychildhoodfairy.com/thank-you-page-hcptsd-A", gift: true }
+];
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1280, scrolled: false, menu: null, sheet: false, sec: null, sel: 0, email: "", done: false, video: false, bar: true, qStep: "intro", qi: 0, qa: [], qEmail: "", qName: "" };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth, sheet: window.innerWidth < 1100 ? this.state.sheet : false });
+    this.onScroll = () => { const s = window.scrollY > 8; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const els = [...document.querySelectorAll("main > section")].slice(1);
+      this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.style.opacity = 1; en.target.style.transform = "none"; this.io.unobserve(en.target); } }), { threshold: 0.12 });
+      els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight) return; el.style.opacity = 0; el.style.transform = "translateY(18px)"; el.style.transition = "opacity .7s ease, transform .7s ease"; this.io.observe(el); });
+    }
+    window.addEventListener("resize", this.onResize); window.addEventListener("scroll", this.onScroll, { passive: true });
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); window.removeEventListener("resize", this.onResize); window.removeEventListener("scroll", this.onScroll); }
+  renderVals() {
+    const { w, scrolled, menu, sheet, sec, sel } = this.state;
+    const mobile = w < 1100;
+    const bar = { width: 22, height: 2, background: "#3a0f2e", borderRadius: 2, transition: "all .25s ease" };
+    return {
+      videoOpen: this.state.video,
+      openVideo: () => this.setState({ video: true }),
+      closeVideo: () => this.setState({ video: false }),
+      stop: e => e.stopPropagation(),
+      qIntro: this.state.qStep === "intro", qAsking: this.state.qStep === "ask", qGate: this.state.qStep === "gate", qResult: this.state.qStep === "result",
+      qStart: () => this.setState({ qStep: "ask", qi: 0, qa: [] }),
+      qRestart: () => this.setState({ qStep: "ask", qi: 0, qa: [] }),
+      qBack: () => this.state.qi === 0 ? this.setState({ qStep: "intro" }) : this.setState({ qi: this.state.qi - 1 }),
+      qNum: this.state.qi + 1, qTotal: QS.length, qText: QS[this.state.qi],
+      qBar: { height: "100%", width: ((this.state.qi) / QS.length * 100) + "%", background: "linear-gradient(90deg,#c98f1f,#5a1846)", borderRadius: 4, transition: "width .35s ease" },
+      qOptions: OPTS.map((label, oi) => { const v = oi === 0 ? 1 : 0;
+        const on = this.state.qa[this.state.qi] === v;
+        return { label, pick: () => { const qa = [...this.state.qa]; qa[this.state.qi] = v; const last = this.state.qi === QS.length - 1; this.setState({ qa }); setTimeout(() => this.setState(last ? { qStep: "gate" } : { qi: this.state.qi + 1 }), 220); },
+          style: { display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 60, padding: "0 24px", borderRadius: 16, cursor: "pointer", textAlign: "left", font: "500 18px Figtree, system-ui, sans-serif", color: "#3a0f2e", transition: "all .2s ease",
+            background: on ? "#f6eee9" : "#fff", border: on ? "1.5px solid #5a1846" : "1.5px solid #eadbd8" },
+          dot: { width: 20, height: 20, borderRadius: "50%", boxSizing: "border-box", flex: "none", border: on ? "1.5px solid #5a1846" : "1.5px solid rgba(58,15,46,.3)", background: on ? "#5a1846" : "transparent", boxShadow: on ? "inset 0 0 0 4px #fff" : "none" } };
+      }),
+      qEmail: this.state.qEmail, qName: this.state.qName,
+      qSetEmail: e => this.setState({ qEmail: e.target.value }),
+      qSetName: e => this.setState({ qName: e.target.value }),
+      qSubmit: e => { e.preventDefault(); this.setState({ qStep: "result" }); window.scrollTo(0, 0); },
+      ...(() => {
+        const score = this.state.qa.reduce((a, b) => a + (b || 0), 0);
+        const bi = score <= 5 ? 0 : score <= 12 ? 1 : 2, band = BANDS[bi], nx = NEXT[band.next];
+        return { rGreeting: this.state.qName ? "Your results, " + this.state.qName : "Your results", rTitle: band.title, rBody: band.body,
+          rSegs: [0, 1, 2].map(i => ({ style: { height: 10, borderRadius: 6, background: i === bi ? "#5a1846" : i < bi ? "#c9a4b9" : "#f1e6e2", transition: "background .3s ease" } })),
+          rNextTitle: nx.t, rNextBody: nx.b, rNextCta: nx.cta, rNextHref: nx.href, rGift: nx.gift };
+      })(),
+      barOn: this.state.bar,
+      closeBar: () => this.setState({ bar: false }),
+      sheetStyle: { position: "fixed", top: this.state.bar ? 108 : 68, left: 0, right: 0, bottom: 0, zIndex: 49, background: "#fbf7f2", overflowY: "auto", display: "flex", flexDirection: "column", padding: "8px 20px 32px" },
+      isMobile: mobile, isDesktop: !mobile, sheetOpen: mobile && sheet,
+      headerStyle: { position: "sticky", top: 0, zIndex: 50, background: scrolled || sheet ? "rgba(251,247,242,.94)" : "#fbf7f2", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderBottom: scrolled ? "1px solid #eadbd8" : "1px solid transparent", boxShadow: scrolled ? "0 6px 24px rgba(58,15,46,.06)" : "none", transition: "all .25s ease" },
+      logoStyle: { height: mobile ? 76 : (scrolled ? 100 : 126), margin: mobile ? "-14px 0 -14px -6px" : (scrolled ? "-20px 0 -20px -10px" : "-26px 0 -26px -12px"), display: "block", transition: "all .25s ease" },
+      bar1: { ...bar, transform: sheet ? "translateY(7px) rotate(45deg)" : "none" },
+      bar2: { ...bar, opacity: sheet ? 0 : 1 },
+      bar3: { ...bar, transform: sheet ? "translateY(-7px) rotate(-45deg)" : "none" },
+      toggleSheet: () => this.setState({ sheet: !sheet }),
+      closeSheet: () => this.setState({ sheet: false }),
+      closeMenu: () => this.setState({ menu: null }),
+      menus: MENUS.map((m, i) => {
+        const open = menu === i;
+        return { ...m, open, enter: () => this.setState({ menu: i }),
+          btnStyle: { display: "flex", alignItems: "center", gap: 6, whiteSpace: "nowrap", padding: "10px 14px", borderRadius: 999, cursor: "pointer", background: open ? "#f1e6e2" : "transparent", color: open ? "#3a0f2e" : "#5e4454" } };
+      }),
+      sections: MENUS.map((m, i) => ({ ...m, open: sec === i, toggle: () => this.setState({ sec: sec === i ? null : i }),
+        chev: { fontFamily: "Figtree, sans-serif", fontSize: 26, color: "#c98f1f", transition: "transform .25s ease", transform: sec === i ? "rotate(45deg)" : "none" } })),
+      cards: PATHS.map((d, i) => {
+        const on = i === sel;
+        return { num: ["i.", "ii.", "iii."][i], label: d.label, pick: () => this.setState({ sel: i }),
+          style: { display: "flex", flexDirection: "column", gap: 18, padding: 28, minHeight: mobile ? 0 : 130, borderRadius: 20, cursor: "pointer", transition: "all .25s ease",
+            background: on ? "#fff" : "rgba(255,255,255,.4)", border: on ? "1.5px solid #5a1846" : "1px solid rgba(58,15,46,.16)",
+            boxShadow: on ? "0 14px 34px rgba(58,15,46,.10)" : "none", transform: on ? "translateY(-2px)" : "none" },
+          dot: { width: 18, height: 18, borderRadius: "50%", boxSizing: "border-box", transition: "all .25s ease",
+            border: on ? "1.5px solid #5a1846" : "1.5px solid rgba(58,15,46,.3)", background: on ? "#5a1846" : "transparent", boxShadow: on ? "inset 0 0 0 3px #fff" : "none" } };
+      }),
+      rec: PATHS[sel],
+      socials: SOCIALS,
+      minorSocials: SOCIALS.slice(1),
+      footerLinks: [{ t: "Blog", href: "https://blog.crappychildhoodfairy.com" }, { t: "Podcast", href: "https://www.youtube.com/playlist?list=PLl504D3b_OPgaKBVP-QUHuhSH8sJpsY-k" }, { t: "Contact", href: "write-to-anna.html" }],
+      footerCols: [
+        { label: "Start here", items: MENUS[0].items },
+        { label: "Learn", items: MENUS[1].items.slice(0, 4) },
+        { label: "Membership", items: [{ t: "Join", href: C + "/membership" }, { t: "Log in", href: C + "/login" }] },
+        { label: "About", items: [...MENUS[3].items, { t: "Blog", href: "https://blog.crappychildhoodfairy.com" }] }
+      ],
+      email: this.state.email,
+      setEmail: e => this.setState({ email: e.target.value }),
+      subscribe: e => { e.preventDefault(); this.setState({ done: true }); },
+      notSubscribed: !this.state.done, subscribed: this.state.done
+    };
+  }
+}
+</script>
+</body>
+</html>

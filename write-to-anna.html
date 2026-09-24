@@ -1,145 +1,362 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Independent redesign concept for Crappy Childhood Fairy.">
-<title>Write to Anna — Crappy Childhood Fairy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="inner-pages.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="concept-bar">Independent redesign concept · not the official Crappy Childhood Fairy website</div>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>html{scroll-behavior:smooth}body{margin:0;background:#fbf7f2;color:#3a0f2e;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{color:#5a1846}input::placeholder{color:#8f7686}:focus-visible{outline:2px solid #c98f1f;outline-offset:3px;border-radius:6px}@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}</style></helmet>
 
-<header class="site-header">
-  <a class="brand logo-brand" href="index.html" aria-label="Crappy Childhood Fairy home">
-    <img src="CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" class="site-logo">
-  </a>
-  
-    <div class="header-socials" aria-label="Follow Crappy Childhood Fairy">
-      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a>
-      <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 2A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8Zm5.3-3.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg></a>
-      <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7h1.9V2.4c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.4H7v3.5h2.9v9h3.8Z"/></svg></a>
-      <a href="https://x.com/CChildhoodFairy" target="_blank" rel="noreferrer" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H22l-8.3 9.5L23.5 22h-7.7l-6-7.8L3 22H-.8l8.9-10.2L-1.3 2h7.9l5.4 7.1L18.2 2Zm-1.3 18h2.1L5.4 3.9H3.1L16.9 20Z"/></svg></a>
+<header style="{{ headerStyle }}">
+  <sc-if value="{{ barOn }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;height:40px;padding:0 52px;background:#3a0f2e;color:#fbf7f2;font-size:14px">
+      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fbf7f2"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> Daily Practice + Q&amp;A with Anna · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot →</span></span></a>
+      <button onClick="{{ closeBar }}" aria-label="Dismiss" style="position:absolute;right:8px;top:0;width:40px;height:40px;background:none;border:none;color:#dcc6d3;font-size:18px;cursor:pointer">×</button>
     </div>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Tools &amp; Resources <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="daily-practice.html">The Daily Practice</a>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="books.html">Books</a>
+  </sc-if>
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px clamp(16px,4vw,56px)">
+    <a href="index.html" style="display:block;flex:none"><img src="uploads/CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" style="{{ logoStyle }}"></a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav onMouseLeave="{{ closeMenu }}" style="display:flex;gap:6px;font-size:15px;font-weight:500;color:#5e4454">
+        <sc-for list="{{ menus }}" as="m" hint-placeholder-count="4">
+          <div onMouseEnter="{{ m.enter }}" style="position:relative">
+            <div style="{{ m.btnStyle }}">{{ m.label }}<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;left:0;padding-top:8px;z-index:10">
+                <div style="width:280px;display:flex;flex-direction:column;padding:8px;background:#fff;border:1px solid #eadbd8;border-radius:16px;box-shadow:0 12px 32px rgba(58,15,46,.12)">
+                  <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="3">
+                    <a href="{{ it.href }}" style="display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:10px" style-hover="background:#f6eee9">
+                      <span style="font-size:15px;font-weight:600;color:#3a0f2e">{{ it.t }}</span>
+                      <span style="font-size:13px;font-weight:400;color:#7a5f6e">{{ it.d }}</span>
+                    </a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </nav>
+      <div style="display:flex;gap:18px;align-items:center;font-size:15px;font-weight:500;white-space:nowrap;flex:none">
+        <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5e4454">Log in</a>
+        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 20px;border:1.5px solid #3a0f2e;border-radius:999px;color:#3a0f2e">Join</a>
       </div>
-    </div>
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Courses &amp; Events <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="daily-practice-live.html">Daily Practice Live</a>
-        <a href="courses.html">Courses</a>
-        <a href="webinars.html">Webinars</a>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 18px;border:1.5px solid #3a0f2e;border-radius:999px;font-size:15px;font-weight:600">Join</a>
+        <button onClick="{{ toggleSheet }}" aria-label="Menu" style="width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:none;cursor:pointer;padding:0">
+          <span style="{{ bar1 }}"></span><span style="{{ bar2 }}"></span><span style="{{ bar3 }}"></span>
+        </button>
       </div>
-    </div>
-    <div class="nav-group">
-      <button class="nav-parent" aria-expanded="false">Membership <span>⌄</span></button>
-      <div class="nav-dropdown">
-        <a href="membership.html#join">Become a Member</a>
-        <a href="membership.html#login">Member Login</a>
-      </div>
-    </div>
-    <a href="about-anna.html">About Anna</a>
-    <a href="write-to-anna.html" aria-current="page">Write to Anna</a>
-  </nav>
+    </sc-if>
+  </div>
 </header>
 
-<main id="main" class="inner-main letter-page">
-  <section class="page-hero section-shell letter-hero">
-    <div>
-      <p class="eyebrow">Ask the Fairy</p>
-      <h1>Write to Anna</h1>
-      <p class="page-lede">Send Anna a focused 500–1,000 word letter with one clear question about a challenging situation in your life.</p>
+<sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="{{ sheetStyle }}">
+    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
+      <div style="border-bottom:1px solid #eadbd8">
+        <button onClick="{{ sec.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;background:none;border:none;cursor:pointer;font-family:Newsreader,serif;font-size:26px;color:#3a0f2e;text-align:left">{{ sec.label }}<span style="{{ sec.chev }}">+</span></button>
+        <sc-if value="{{ sec.open }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding:0 0 16px">
+            <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="3">
+              <a href="{{ it.href }}" onClick="{{ closeSheet }}" style="display:flex;flex-direction:column;gap:2px;padding:12px 4px;min-height:44px;box-sizing:border-box">
+                <span style="font-size:17px;font-weight:600">{{ it.t }}</span><span style="font-size:14px;color:#7a5f6e">{{ it.d }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <a href="https://courses.crappychildhoodfairy.com/login" style="padding:20px 4px;font-size:17px;font-weight:600;color:#5e4454">Log in</a>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:14px;padding-top:24px">
+      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;background:#3a0f2e;color:#fbf7f2;border-radius:999px;font-size:16px;font-weight:600"><svg width="24" height="18" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#e2a93b"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#3a0f2e"></path></svg>Watch on YouTube</a>
+      <div style="display:flex;justify-content:center;gap:12px">
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
+      </div>
     </div>
-    <aside class="letter-note">
-      <strong>What Anna is looking for</strong>
-      <p>Questions about challenging situations with friends, partners, dating, work, and family. Tell her what the problem is and what you’d like help with.</p>
-    </aside>
+  </div>
+</sc-if>
+
+<main id="top">
+  <section style="max-width:1180px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:18px;padding:clamp(40px,6vw,72px) clamp(20px,4vw,56px) clamp(28px,3vw,40px)">
+    <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e"><span style="width:40px;height:1px;background:#c98f1f"></span>Write to Anna</div>
+    <h1 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(44px,6vw,68px);line-height:1.04;letter-spacing:-.02em;color:#4a1238">Put it in a letter.</h1>
+    <p style="margin:0;font-size:clamp(18px,2vw,21px);line-height:1.5;color:#5e4454;max-width:620px;text-wrap:pretty">Ask a question, share your story, or tell Anna what’s helped. Take your time — your draft saves as you write.</p>
   </section>
 
-  <section class="soft-section">
-    <div class="section-shell letter-layout">
-      <aside class="letter-guidelines">
-        <p class="eyebrow">Before you write</p>
-        <h2>What makes a strong letter?</h2>
-        <ol class="guideline-list">
-          <li><strong>Write 500–1,000 words.</strong><span>Longer letters will not be accepted.</span></li>
-          <li><strong>Keep your letter focused on one question.</strong><span>Tell Anna what the problem is and what you would like help with.</span></li>
-          <li><strong>Keep background short.</strong><span>If background is needed, it should be no more than half of your letter.</span></li>
-          <li><strong>Choose a situation Anna can respond to.</strong><span>Questions can be about friends, partners, dating, work, or family.</span></li>
-          <li><strong>Skip explicit trauma details.</strong><span>Please do not include explicit descriptions of trauma.</span></li>
-          <li><strong>Protect other people’s privacy.</strong><span>Do not include names or specific identifying details about other people.</span></li>
-        </ol>
-        <p class="small-note">Anna’s team will let you know if your letter is selected.</p>
-      </aside>
+  <section style="max-width:1180px;margin:0 auto;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(28px,4vw,56px);padding:0 clamp(20px,4vw,56px) clamp(56px,7vw,96px)">
+    <aside style="flex:1 1 280px;max-width:360px;display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:Newsreader,serif;font-size:24px;color:#3a0f2e">What’s it about?</span>
+        <div role="radiogroup" style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ topics }}" as="tp" hint-placeholder-count="5">
+            <button type="button" role="radio" aria-checked="{{ tp.on }}" onClick="{{ tp.pick }}" style="{{ tp.style }}"><span style="{{ tp.dot }}"></span>{{ tp.t }}</button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ showSupport }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;padding:14px 16px;border-radius:12px;background:#fff;border:1px solid #eadbd8;font-size:14px;line-height:1.5;color:#5e4454">For login or billing, the support team is fastest: <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5a1846;font-weight:600;text-decoration:underline;text-underline-offset:3px">member help →</a></p>
+        </sc-if>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;border-radius:16px;background:#f6eee9;font-size:15px;line-height:1.5;color:#5e4454">
+        <span style="font-weight:700;color:#3a0f2e">In crisis right now?</span>
+        <span>Please don’t wait for a reply. Call or text <b style="color:#3a0f2e">988</b> (US) or find a local line at findahelpline.com.</span>
+      </div>
+      <p style="margin:0;font-size:14px;line-height:1.55;color:#7a5f6e">Letters are private. Anna reads them, but can’t reply to everyone personally.</p>
+    </aside>
 
-      <form class="letter-card letter-form-large" id="letter-form">
-        <div class="field-row">
-          <label>
-            Your name
-            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
-          </label>
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ send }}" style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:22px;padding:clamp(28px,5vw,64px) clamp(22px,5vw,64px);background:#fff;border:1px solid #eadbd8;border-top:3px solid #e2a93b;border-radius:20px;box-shadow:0 24px 60px rgba(58,15,46,.10)">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 16px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e">Re: {{ topicLabel }}</span>
+          <span style="font-family:Newsreader,serif;font-style:italic;font-size:18px;color:#7a5f6e">{{ today }}</span>
+        </div>
+        <span style="font-family:Newsreader,serif;font-size:clamp(32px,3.8vw,42px);line-height:1.1;color:#4a1238">Dear Anna,</span>
+        <sc-if value="{{ promptsOn }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+            <span style="font-size:14px;color:#7a5f6e;margin-right:4px">Need a place to start?</span>
+            <sc-for list="{{ prompts }}" as="p" hint-placeholder-count="3">
+              <button type="button" onClick="{{ p.add }}" style="padding:8px 14px;border-radius:999px;border:1px solid #eadbd8;background:#fbf7f2;color:#5e4454;font:italic 16px Newsreader,serif;cursor:pointer" style-hover="border-color:#c98f1f;color:#3a0f2e">{{ p.t }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ lined }}" hint-placeholder-val="{{ true }}">
+          <textarea required="required" aria-label="Your letter" placeholder="Write as much or as little as you like…" value="{{ body }}" onChange="{{ setBody }}" style="font-family:Newsreader,serif;font-size:21px;color:#3a0f2e;border:none;outline:none;resize:vertical;padding:0;margin:0;min-height:400px;width:100%;box-sizing:border-box;field-sizing:content;background-color:transparent;line-height:40px;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 39px,#eadbd8 39px,#eadbd8 40px);background-attachment:local"></textarea>
+        </sc-if>
+        <sc-if value="{{ plain }}" hint-placeholder-val="{{ false }}">
+          <textarea required="required" aria-label="Your letter" placeholder="Write as much or as little as you like…" value="{{ body }}" onChange="{{ setBody }}" style="font-family:Newsreader,serif;font-size:21px;color:#3a0f2e;border:none;outline:none;resize:vertical;padding:0;margin:0;min-height:400px;width:100%;box-sizing:border-box;field-sizing:content;background-color:transparent;line-height:1.7"></textarea>
+        </sc-if>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;font-size:13px;color:#7a5f6e"><span>{{ wordCount }}</span><span>{{ savedLabel }}</span></div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;padding-top:8px;max-width:440px">
+          <span style="font-family:Newsreader,serif;font-style:italic;font-size:24px;color:#3a0f2e">Warmly,</span>
+          <input required="required" aria-label="Your name" placeholder="Your name (first name is fine)" value="{{ name }}" onChange="{{ setName }}" style="height:52px;padding:0 2px;border:none;border-bottom:1.5px solid #d9c4cf;background:transparent;font:italic 26px Newsreader,serif;color:#3a0f2e;outline:none" style-focus="border-bottom-color:#c98f1f">
+          <input type="email" required="required" aria-label="Your email" placeholder="Your email, in case Anna’s team replies" value="{{ lEmail }}" onChange="{{ setLEmail }}" style="height:52px;padding:0 2px;border:none;border-bottom:1.5px solid #d9c4cf;background:transparent;font:500 16px Figtree,system-ui,sans-serif;color:#3a0f2e;outline:none" style-focus="border-bottom-color:#c98f1f">
         </div>
 
-        <label>
-          Your question
-          <input type="text" name="question" required placeholder="What would you like Anna to answer?">
+        <label style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.5;color:#5e4454;cursor:pointer">
+          <input type="checkbox" checked="{{ share }}" onChange="{{ toggleShare }}" style="flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:#5a1846">
+          Anna may read my letter, without my name, in a video or live call.
         </label>
 
-        <label>
-          Your letter
-          <textarea id="letter" name="letter" required placeholder="Add the context Anna needs to understand your question."></textarea>
-        </label>
-
-        <div class="letter-meta">
-          <strong id="word-count">0 / 1000 words</strong>
-          <span>Minimum 500 words · Maximum 1,000 words</span>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding-top:18px;border-top:1px solid #f1e6e2">
+          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:12px;height:56px;padding:0 30px;border:none;border-radius:999px;background:#5a1846;color:#fff;font:600 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease" style-hover="background:#3a0f2e;transform:translateY(-1px)">Send my letter<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21 L14.5 9.5" stroke="#e2a93b" stroke-width="1.6" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="#e2a93b"></path></svg></button>
+          <button type="button" onClick="{{ clear }}" style="padding:10px 4px;border:none;background:none;font:500 15px Figtree,system-ui,sans-serif;color:#7a5f6e;text-decoration:underline;text-underline-offset:4px;cursor:pointer">Start over</button>
         </div>
-
-        <label class="check-row">
-          <input type="checkbox" name="privacy" required>
-          <span>I have not included names or specific identifying details about other people.</span>
-        </label>
-
-        
-
-        <button class="btn btn-primary" type="submit">Check my letter</button>
-        <a class="text-link official-letter-link" href="https://bit.ly/CCF_Letters" target="_blank" rel="noreferrer">Open Anna’s official letter form →</a>
-        <p id="form-status" class="form-status" role="status"></p>
-        <p class="prototype-note">Prototype only. This form does not send or store submissions.</p>
       </form>
-    </div>
+    </sc-if>
+
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:20px;padding:clamp(36px,6vw,72px) clamp(22px,5vw,64px);background:#fff;border:1px solid #eadbd8;border-top:3px solid #e2a93b;border-radius:20px;box-shadow:0 24px 60px rgba(58,15,46,.10)">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="#e2a93b"></path><path d="M3 21 L14.5 9.5" stroke="#c98f1f" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.08;color:#4a1238">Your letter is on its way.</h2>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:#5e4454;max-width:540px;text-wrap:pretty">Thank you for trusting Anna with this, {{ firstName }}. Writing it down is part of the work — whether or not you hear back.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:12px">
+          <a href="daily-practice.html" style="display:flex;align-items:center;gap:10px;padding:16px 26px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase" style-hover="background:#efb84c">Try the Daily Practice →</a>
+          <button type="button" onClick="{{ again }}" style="padding:16px 24px;border:1.5px solid #3a0f2e;border-radius:999px;background:transparent;color:#3a0f2e;font:600 15px Figtree,system-ui,sans-serif;cursor:pointer">Write another</button>
+        </div>
+      </div>
+    </sc-if>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="section-shell footer-layout">
-    <div class="footer-brand"><img src="CrappyChildhoodFairy.png" alt="" class="footer-logo"><p>Independent redesign concept.</p></div>
-    <div class="footer-links">
-      <a href="daily-practice.html">Daily Practice</a>
-      <a href="courses.html">Courses</a>
-      <a href="books.html">Books</a>
-      <a href="membership.html">Membership</a>
+<sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeVideo }}" style="position:fixed;inset:0;z-index:100;background:rgba(30,8,24,.82);display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,48px)">
+    <div onClick="{{ stop }}" style="width:100%;max-width:980px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;color:#fbf7f2">
+        <span style="font-family:Newsreader,serif;font-size:clamp(20px,2.4vw,26px)">How I healed from a crappy childhood</span>
+        <button onClick="{{ closeVideo }}" aria-label="Close video" style="width:44px;height:44px;flex:none;border-radius:50%;border:1.5px solid rgba(251,247,242,.4);background:transparent;color:#fbf7f2;font-size:20px;cursor:pointer">×</button>
+      </div>
+      <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000">
+        <iframe src="https://www.youtube-nocookie.com/embed/K_46GEbc9WY?autoplay=1&amp;rel=0&amp;modestbranding=1" title="Anna’s story" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen="allowfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
+        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start →</a>
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#dcc6d3">More videos on YouTube ↗</a>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<footer style="background:#3a0f2e;color:#fbf7f2">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,56px);padding:clamp(56px,7vw,80px) clamp(20px,4vw,56px) 32px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e2a93b">The newsletter</div>
+        <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,3.6vw,40px);line-height:1.1">Join 175,000 readers.</h2>
+        <p style="margin:0;font-size:17px;line-height:1.5;color:#dcc6d3;max-width:440px">A short weekly note from Anna with one tool you can use right away.</p>
+      </div>
+      <sc-if value="{{ notSubscribed }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ subscribe }}" style="display:flex;flex-wrap:wrap;gap:10px">
+          <input type="email" required="required" placeholder="Your email address" value="{{ email }}" onChange="{{ setEmail }}" style="flex:1 1 240px;min-width:0;height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid rgba(251,247,242,.3);background:rgba(251,247,242,.06);color:#fbf7f2;font:500 16px Figtree,system-ui,sans-serif;outline:none">
+          <button type="submit" style="height:56px;padding:0 28px;border:none;border-radius:999px;background:#e2a93b;color:#3a0f2e;font:700 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Subscribe</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ subscribed }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;gap:14px;min-height:56px;padding:0 24px;border-radius:999px;background:rgba(226,169,59,.14);color:#f3d9a4;font-size:16px;font-weight:600">✦ You’re in. Check your inbox for a welcome note.</div>
+      </sc-if>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid rgba(251,247,242,.14);border-bottom:1px solid rgba(251,247,242,.14)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 14px;border-radius:999px;background:#e2a93b;color:#3a0f2e;font-size:15px;font-weight:700" style-hover="background:#efb84c;transform:translateY(-1px)"><svg width="22" height="16" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#3a0f2e"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#e2a93b"></path></svg>YouTube</a>
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
+      </div>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;font-size:14px;letter-spacing:.02em">
+        <sc-for list="{{ footerLinks }}" as="it" hint-placeholder-count="5">
+          <a href="{{ it.href }}" style="color:#bda3b3;text-decoration:underline;text-decoration-color:rgba(189,163,179,.4);text-underline-offset:4px">{{ it.t }}</a>
+        </sc-for>
+      </nav>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.55;color:#bda3b3">
+      <p style="margin:0;color:#fbf7f2;font-size:14px">In crisis? Call or text <b>988</b> (US) or find a local line at findahelpline.com. Your safety matters.</p>
+      <p style="margin:0">Educational content only — not a substitute for professional care.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:6px">
+        <span>© 2026 Crappy Childhood Fairy</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 22px">
+          <a href="https://courses.crappychildhoodfairy.com/terms-of-service" style="color:#dcc6d3">Terms of Service</a>
+          <a href="https://courses.crappychildhoodfairy.com/privacy-policy" style="color:#dcc6d3">Privacy Policy</a>
+          <a href="https://crappychildhoodfairy.com/disclaimer/" style="color:#dcc6d3">Disclaimer</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;paper&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;lined&quot;,&quot;plain&quot;],&quot;default&quot;:&quot;lined&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Letter&quot;},&quot;showPrompts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Letter&quot;}}">
+const C = "https://courses.crappychildhoodfairy.com";
+const MENUS = [
+  { label: "Start here", items: [{ t: "Take the CPTSD quiz", d: "3 minutes, private", href: "quizzes.html" }, { t: "Free Daily Practice", d: "Writing + meditation, free Zoom calls", href: "daily-practice.html" }, { t: "Free tools", d: "Quizzes and worksheets", href: C + "/free-tools" }] },
+  { label: "Learn", items: [{ t: "Courses", d: "Self-paced, from $70", href: "courses.html" }, { t: "Live courses with Anna", d: "Small-group intensives", href: C + "/8w-rr-intensive" }, { t: "Webinars", d: "Monthly, $45 · free for members", href: "webinars.html" }, { t: "Books", d: "Re-Regulated & Connectability", href: "books.html" }, { t: "Videos & blog", d: "Free, new every week", href: "https://www.youtube.com/@crappychildhoodfairy" }] },
+  { label: "Membership", items: [{ t: "What’s included", d: "All courses, Q&A calls, community", href: C + "/membership" }, { t: "Plans & pricing", d: "$49/mo or $399/yr", href: C + "/membership" }] },
+  { label: "About Anna", items: [{ t: "My story", d: "How I healed my Childhood PTSD", href: "about-anna.html" }, { t: "Write to Anna", d: "Questions and contact", href: "https://crappychildhoodfairy.com/contact/" }] }
+];
+const PATHS = [
+  { label: "I’m wondering if this is even me", title: "Take the CPTSD quiz", body: "A private 3-minute check of the most common signs that early trauma is affecting you now — with a plain-English explanation of your results.", cta: "Start the quiz", meta: "Free · 3 min", href: "quizzes.html" },
+  { label: "I need some relief, now", title: "Free Daily Practice", body: "The two techniques that changed everything for Anna — daily writing and meditation — plus free group Zoom calls to practice together.", cta: "Enroll free", meta: "Free · Next live session Oct 6", href: "daily-practice.html" },
+  { label: "I’m ready for real support", title: "Membership", body: "Every course, twice-monthly Q&A calls with Anna, and a private community of people doing the same work.", cta: "Become a member", meta: "$49/mo or $399/yr", href: C + "/membership" }
+];
+const TOPICS = ["A question for Anna", "My story", "What’s helped me", "An idea for a video", "Help with a course or membership"];
+const PROMPTS = ["I’ve never told anyone this, but…", "I’ve been wondering…", "Since I started the Daily Practice…"];
+const SOCIALS = [
+  { name: "YouTube", glyph: "▶", href: "https://www.youtube.com/@crappychildhoodfairy" },
+  { name: "Instagram", glyph: "IG", href: "https://www.instagram.com/crappychildhoodfairy/" },
+  { name: "Facebook", glyph: "f", href: "https://www.facebook.com/CrappyChildhoodFairy/" },
+  { name: "X / Twitter", glyph: "X", href: "https://twitter.com/cchildhoodfairy" }
+];
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1280, scrolled: false, menu: null, sheet: false, sec: null, sel: 0, email: "", done: false, video: false, bar: true, dpEmail: "", dpDone: false, dpPlay: false, topic: 0, body: "", name: "", lEmail: "", share: false, sent: false, saved: false };
+  componentDidMount() {
+    this.dateTimer = setInterval(() => this.forceUpdate(), 60000);
+    this.onVis = () => { if (!document.hidden) this.forceUpdate(); };
+    document.addEventListener("visibilitychange", this.onVis);
+    try { const d = JSON.parse(localStorage.getItem("ccf-letter-draft") || "null"); if (d) this.setState({ ...d, saved: !!d.body }); } catch (e) {}
+    this.onResize = () => this.setState({ w: window.innerWidth, sheet: window.innerWidth < 1100 ? this.state.sheet : false });
+    this.onScroll = () => { const s = window.scrollY > 8; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const els = [...document.querySelectorAll("main > section")].slice(1);
+      this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.style.opacity = 1; en.target.style.transform = "none"; this.io.unobserve(en.target); } }), { threshold: 0.12 });
+      els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight) return; el.style.opacity = 0; el.style.transform = "translateY(18px)"; el.style.transition = "opacity .7s ease, transform .7s ease"; this.io.observe(el); });
+    }
+    window.addEventListener("resize", this.onResize); window.addEventListener("scroll", this.onScroll, { passive: true });
+  }
+  componentWillUnmount() { clearInterval(this.dateTimer); document.removeEventListener("visibilitychange", this.onVis); this.io && this.io.disconnect(); window.removeEventListener("resize", this.onResize); window.removeEventListener("scroll", this.onScroll); }
+  saveDraft(patch) {
+    this.setState(patch, () => { const { topic, body, name, lEmail, share } = this.state; try { localStorage.setItem("ccf-letter-draft", JSON.stringify({ topic, body, name, lEmail, share })); } catch (e) {} this.setState({ saved: true }); });
+  }
+  letterVals() {
+    const s = this.state, mobile = s.w < 1100;
+    const n = s.body.trim() ? s.body.trim().split(/\s+/).length : 0;
+    return {
+      topics: TOPICS.map((t, i) => { const on = s.topic === i; return { t, on, pick: () => this.saveDraft({ topic: i }),
+        style: { display: "flex", alignItems: "center", gap: 12, minHeight: 48, padding: "12px 16px", borderRadius: 14, textAlign: "left", cursor: "pointer", font: "500 16px Figtree, system-ui, sans-serif", color: "#3a0f2e", transition: "all .2s ease", background: on ? "#fff" : "transparent", border: on ? "1.5px solid #5a1846" : "1px solid rgba(58,15,46,.16)", boxShadow: on ? "0 8px 22px rgba(58,15,46,.08)" : "none" },
+        dot: { flex: "none", width: 18, height: 18, borderRadius: "50%", boxSizing: "border-box", border: on ? "1.5px solid #5a1846" : "1.5px solid rgba(58,15,46,.3)", background: on ? "#5a1846" : "transparent", boxShadow: on ? "inset 0 0 0 3px #fff" : "none" } }; }),
+      topicLabel: TOPICS[s.topic], showSupport: s.topic === 4,
+      today: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+      promptsOn: (this.props.showPrompts ?? true) && !s.body.trim(),
+      prompts: PROMPTS.map(t => ({ t, add: () => this.saveDraft({ body: t + " " }) })),
+      lined: (this.props.paper ?? "lined") === "lined", plain: this.props.paper === "plain",
+      body: s.body, setBody: e => this.saveDraft({ body: e.target.value }),
+      name: s.name, setName: e => this.saveDraft({ name: e.target.value }),
+      lEmail: s.lEmail, setLEmail: e => this.saveDraft({ lEmail: e.target.value }),
+      share: s.share, toggleShare: () => this.saveDraft({ share: !s.share }),
+      wordCount: n === 1 ? "1 word" : n + " words",
+      savedLabel: s.saved ? "✓ Draft saved on this device" : "Your draft saves as you type",
+      firstName: (s.name.trim().split(" ")[0]) || "friend",
+      send: e => { e.preventDefault(); try { localStorage.removeItem("ccf-letter-draft"); } catch (x) {} this.setState({ sent: true }); scrollTo({ top: 0, behavior: "smooth" }); },
+      clear: () => { if (!s.body || confirm("Clear your letter and start over?")) this.saveDraft({ body: "", saved: false }); },
+      again: () => this.setState({ sent: false, body: "", saved: false }),
+      notSent: !s.sent, sent: s.sent
+    };
+  }
+  renderVals() {
+    const { w, scrolled, menu, sheet, sec, sel } = this.state;
+    const mobile = w < 1100;
+    const bar = { width: 22, height: 2, background: "#3a0f2e", borderRadius: 2, transition: "all .25s ease" };
+    return {
+      ...this.letterVals(),
+      videoOpen: this.state.video,
+      openVideo: () => this.setState({ video: true }),
+      closeVideo: () => this.setState({ video: false }),
+      stop: e => e.stopPropagation(),
+      dpPoster: !this.state.dpPlay, dpPlaying: this.state.dpPlay,
+      dpPlay: () => this.setState({ dpPlay: true }),
+      dpVideoSrc: "https://www.youtube-nocookie.com/embed/" + (this.props.videoId || "K_46GEbc9WY") + "?autoplay=1&rel=0&modestbranding=1",
+      dpEmail: this.state.dpEmail, dpDone: this.state.dpDone, dpNotDone: !this.state.dpDone,
+      dpSetEmail: e => this.setState({ dpEmail: e.target.value }),
+      dpSubmit: e => { e.preventDefault(); this.setState({ dpDone: true }); },
+      barOn: this.state.bar,
+      closeBar: () => this.setState({ bar: false }),
+      sheetStyle: { position: "fixed", top: this.state.bar ? 108 : 68, left: 0, right: 0, bottom: 0, zIndex: 49, background: "#fbf7f2", overflowY: "auto", display: "flex", flexDirection: "column", padding: "8px 20px 32px" },
+      isMobile: mobile, isDesktop: !mobile, sheetOpen: mobile && sheet,
+      headerStyle: { position: "sticky", top: 0, zIndex: 50, background: scrolled || sheet ? "rgba(251,247,242,.94)" : "#fbf7f2", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderBottom: scrolled ? "1px solid #eadbd8" : "1px solid transparent", boxShadow: scrolled ? "0 6px 24px rgba(58,15,46,.06)" : "none", transition: "all .25s ease" },
+      logoStyle: { height: mobile ? 76 : (scrolled ? 100 : 126), margin: mobile ? "-14px 0 -14px -6px" : (scrolled ? "-20px 0 -20px -10px" : "-26px 0 -26px -12px"), display: "block", transition: "all .25s ease" },
+      bar1: { ...bar, transform: sheet ? "translateY(7px) rotate(45deg)" : "none" },
+      bar2: { ...bar, opacity: sheet ? 0 : 1 },
+      bar3: { ...bar, transform: sheet ? "translateY(-7px) rotate(-45deg)" : "none" },
+      toggleSheet: () => this.setState({ sheet: !sheet }),
+      closeSheet: () => this.setState({ sheet: false }),
+      closeMenu: () => this.setState({ menu: null }),
+      menus: MENUS.map((m, i) => {
+        const open = menu === i;
+        return { ...m, open, enter: () => this.setState({ menu: i }),
+          btnStyle: { display: "flex", alignItems: "center", gap: 6, whiteSpace: "nowrap", padding: "10px 14px", borderRadius: 999, cursor: "pointer", background: open ? "#f1e6e2" : "transparent", color: open ? "#3a0f2e" : "#5e4454" } };
+      }),
+      sections: MENUS.map((m, i) => ({ ...m, open: sec === i, toggle: () => this.setState({ sec: sec === i ? null : i }),
+        chev: { fontFamily: "Figtree, sans-serif", fontSize: 26, color: "#c98f1f", transition: "transform .25s ease", transform: sec === i ? "rotate(45deg)" : "none" } })),
+      cards: PATHS.map((d, i) => {
+        const on = i === sel;
+        return { num: ["i.", "ii.", "iii."][i], label: d.label, pick: () => this.setState({ sel: i }),
+          style: { display: "flex", flexDirection: "column", gap: 18, padding: 28, minHeight: mobile ? 0 : 130, borderRadius: 20, cursor: "pointer", transition: "all .25s ease",
+            background: on ? "#fff" : "rgba(255,255,255,.4)", border: on ? "1.5px solid #5a1846" : "1px solid rgba(58,15,46,.16)",
+            boxShadow: on ? "0 14px 34px rgba(58,15,46,.10)" : "none", transform: on ? "translateY(-2px)" : "none" },
+          dot: { width: 18, height: 18, borderRadius: "50%", boxSizing: "border-box", transition: "all .25s ease",
+            border: on ? "1.5px solid #5a1846" : "1.5px solid rgba(58,15,46,.3)", background: on ? "#5a1846" : "transparent", boxShadow: on ? "inset 0 0 0 3px #fff" : "none" } };
+      }),
+      rec: PATHS[sel],
+      socials: SOCIALS,
+      minorSocials: SOCIALS.slice(1),
+      footerLinks: [{ t: "Blog", href: "https://blog.crappychildhoodfairy.com" }, { t: "Podcast", href: "https://www.youtube.com/playlist?list=PLl504D3b_OPgaKBVP-QUHuhSH8sJpsY-k" }, { t: "Contact", href: "https://crappychildhoodfairy.com/contact/" }],
+      footerCols: [
+        { label: "Start here", items: MENUS[0].items },
+        { label: "Learn", items: MENUS[1].items.slice(0, 4) },
+        { label: "Membership", items: [{ t: "Join", href: C + "/membership" }, { t: "Log in", href: C + "/login" }] },
+        { label: "About", items: [...MENUS[3].items, { t: "Blog", href: "https://blog.crappychildhoodfairy.com" }] }
+      ],
+      email: this.state.email,
+      setEmail: e => this.setState({ email: e.target.value }),
+      subscribe: e => { e.preventDefault(); this.setState({ done: true }); },
+      notSubscribed: !this.state.done, subscribed: this.state.done
+    };
+  }
+}
+</script>
 </body>
 </html>

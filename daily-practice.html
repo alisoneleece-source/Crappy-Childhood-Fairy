@@ -12,7 +12,7 @@
 <header style="{{ headerStyle }}">
   <sc-if value="{{ barOn }}" hint-placeholder-val="{{ true }}">
     <div style="position:relative;display:flex;align-items:center;justify-content:center;height:40px;padding:0 52px;background:#3a0f2e;color:#fbf7f2;font-size:14px">
-      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fbf7f2"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> Daily Practice + Q&amp;A with Anna · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot →</span></span></a>
+      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fbf7f2"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">Daily Practice + Q&amp;A with Anna</sc-if><sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">Q&amp;A</sc-if> · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></span></span></a>
       <button onClick="{{ closeBar }}" aria-label="Dismiss" style="position:absolute;right:8px;top:0;width:40px;height:40px;background:none;border:none;color:#dcc6d3;font-size:18px;cursor:pointer">×</button>
     </div>
   </sc-if>
@@ -40,12 +40,12 @@
       </nav>
       <div style="display:flex;gap:18px;align-items:center;font-size:15px;font-weight:500;white-space:nowrap;flex:none">
         <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5e4454">Log in</a>
-        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 20px;border:1.5px solid #3a0f2e;border-radius:999px;color:#3a0f2e">Join</a>
+        <a href="membership.html" style="padding:10px 20px;border:1.5px solid #3a0f2e;border-radius:999px;color:#3a0f2e">Join</a>
       </div>
     </sc-if>
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex;align-items:center;gap:10px">
-        <a href="https://courses.crappychildhoodfairy.com/membership" style="padding:10px 18px;border:1.5px solid #3a0f2e;border-radius:999px;font-size:15px;font-weight:600">Join</a>
+        <a href="membership.html" style="padding:10px 18px;border:1.5px solid #3a0f2e;border-radius:999px;font-size:15px;font-weight:600">Join</a>
         <button onClick="{{ toggleSheet }}" aria-label="Menu" style="width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:none;cursor:pointer;padding:0">
           <span style="{{ bar1 }}"></span><span style="{{ bar2 }}"></span><span style="{{ bar3 }}"></span>
         </button>
@@ -107,7 +107,7 @@
           <div style="display:flex;flex-direction:column;gap:6px;padding:18px 22px;border-radius:16px;background:#f6eee9;color:#3a0f2e"><span style="font-weight:700">✦ You’re in.</span><span style="font-size:15px;color:#5e4454">Check your inbox — your first video is waiting.</span></div>
         </sc-if>
       <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #f1e6e2;font-size:14px;color:#5e4454"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span>Next live practice call with Anna: <b style="color:#3a0f2e">Oct 6</b></div>
-      <span style="font-size:12px;line-height:1.5;color:#7a5f6e">You’ll get the course plus occasional notes from Anna. Never shared. Unsubscribe anytime.</span>
+      <span style="font-size:14px;line-height:1.5;color:#7a5f6e">You’ll get the course plus occasional notes from Anna. Never shared. Unsubscribe anytime.</span>
     </div>
   </section>
 
@@ -159,7 +159,7 @@
       <div style="position:relative;width:120px;height:120px;flex:none"><image-slot id="dp-anna" shape="circle" src="uploads/Codex%20Image%20Sep%2023%2C%202026%2C%2002_25_40%20PM.png" placeholder="Anna" style="width:120px;height:120px"></image-slot></div>
       <div style="display:flex;flex-direction:column;gap:8px;flex:1 1 420px;max-width:720px">
         <span style="font-family:Newsreader,serif;font-size:26px;color:#3a0f2e">About Anna</span>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#5e4454">Anna Runkle healed her own Childhood PTSD and has taught this method to more than a million people. She isn’t a therapist — she shares what worked. <a href="about-anna.html" style="color:#5a1846;font-weight:600;text-decoration:underline;text-underline-offset:3px">Her story →</a></p>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:#5e4454">Anna Runkle healed her own Childhood PTSD and has taught this method to more than a million people. She isn’t a therapist — she shares what worked. <a href="about-anna.html" style="color:#5a1846;font-weight:600;text-decoration:underline;text-underline-offset:3px">Her story<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a></p>
       </div>
     </div>
   </section>
@@ -168,7 +168,7 @@
     <div style="max-width:1280px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(56px,7vw,72px) clamp(20px,4vw,56px);text-align:center">
       <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.1">Ready to try it?</h2>
       <p style="margin:0;font-size:17px;color:#dcc6d3">Free, private, and you can start today.</p>
-      <a href="#signup" style="display:flex;align-items:center;gap:12px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Start free →</a>
+      <a href="#signup" style="display:flex;align-items:center;gap:12px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Start free<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
     </div>
   </section>
 </main>
@@ -184,15 +184,15 @@
         <iframe src="https://www.youtube-nocookie.com/embed/K_46GEbc9WY?autoplay=1&amp;rel=0&amp;modestbranding=1" title="Anna’s story" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen="allowfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
       </div>
       <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
-        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start →</a>
-        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#dcc6d3">More videos on YouTube ↗</a>
+        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#dcc6d3">More videos on YouTube<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
       </div>
     </div>
   </div>
 </sc-if>
 
 <footer style="background:#3a0f2e;color:#fbf7f2">
-  <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,56px);padding:clamp(56px,7vw,80px) clamp(20px,4vw,56px) 32px">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,3.5vw,40px);padding:clamp(48px,6vw,64px) clamp(20px,4vw,56px) 28px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:end">
       <div style="display:flex;flex-direction:column;gap:12px">
         <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e2a93b">The newsletter</div>
@@ -210,7 +210,8 @@
       </sc-if>
     </div>
 
-    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid rgba(251,247,242,.14);border-bottom:1px solid rgba(251,247,242,.14)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid rgba(251,247,242,.14);border-bottom:1px solid rgba(251,247,242,.14)">
+      <a href="index.html" style="display:block;flex:none"><img src="uploads/CCF-logo-footer-white.png" alt="Crappy Childhood Fairy" style="display:block;height:92px;margin:-22px 0 -22px -8px"></a>
       <div style="display:flex;align-items:center;gap:10px">
         <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 14px;border-radius:999px;background:#e2a93b;color:#3a0f2e;font-size:15px;font-weight:700" style-hover="background:#efb84c;transform:translateY(-1px)"><svg width="22" height="16" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#3a0f2e"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#e2a93b"></path></svg>YouTube</a>
         <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
@@ -224,7 +225,7 @@
       </nav>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.55;color:#bda3b3">
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:-8px;font-size:13px;line-height:1.55;color:#bda3b3">
       <p style="margin:0;color:#fbf7f2;font-size:14px">In crisis? Call or text <b>988</b> (US) or find a local line at findahelpline.com. Your safety matters.</p>
       <p style="margin:0">Educational content only — not a substitute for professional care.</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:6px">
@@ -244,13 +245,13 @@ const C = "https://courses.crappychildhoodfairy.com";
 const MENUS = [
   { label: "Start here", items: [{ t: "Take the CPTSD quiz", d: "3 minutes, private", href: "quizzes.html" }, { t: "Free Daily Practice", d: "Writing + meditation, free Zoom calls", href: "daily-practice.html" }, { t: "Free tools", d: "Quizzes and worksheets", href: C + "/free-tools" }] },
   { label: "Learn", items: [{ t: "Courses", d: "Self-paced, from $70", href: "courses.html" }, { t: "Live courses with Anna", d: "Small-group intensives", href: C + "/8w-rr-intensive" }, { t: "Webinars", d: "Monthly, $45 · free for members", href: "webinars.html" }, { t: "Books", d: "Re-Regulated & Connectability", href: "books.html" }, { t: "Videos & blog", d: "Free, new every week", href: "https://www.youtube.com/@crappychildhoodfairy" }] },
-  { label: "Membership", items: [{ t: "What’s included", d: "All courses, Q&A calls, community", href: C + "/membership" }, { t: "Plans & pricing", d: "$49/mo or $399/yr", href: C + "/membership" }] },
+  { label: "Membership", items: [{ t: "What’s included", d: "All courses, Q&A calls, community", href: "membership.html" }, { t: "Plans & pricing", d: "$49/mo or $399/yr", href: "membership.html" }] },
   { label: "About Anna", items: [{ t: "My story", d: "How I healed my Childhood PTSD", href: "about-anna.html" }, { t: "Write to Anna", d: "Questions and contact", href: "write-to-anna.html" }] }
 ];
 const PATHS = [
   { label: "I’m wondering if this is even me", title: "Take the CPTSD quiz", body: "A private 3-minute check of the most common signs that early trauma is affecting you now — with a plain-English explanation of your results.", cta: "Start the quiz", meta: "Free · 3 min", href: "quizzes.html" },
   { label: "I need some relief, now", title: "Free Daily Practice", body: "The two techniques that changed everything for Anna — daily writing and meditation — plus free group Zoom calls to practice together.", cta: "Enroll free", meta: "Free · Next live session Oct 6", href: "daily-practice.html" },
-  { label: "I’m ready for real support", title: "Membership", body: "Every course, twice-monthly Q&A calls with Anna, and a private community of people doing the same work.", cta: "Become a member", meta: "$49/mo or $399/yr", href: C + "/membership" }
+  { label: "I’m ready for real support", title: "Membership", body: "Every course, twice-monthly Q&A calls with Anna, and a private community of people doing the same work.", cta: "Become a member", meta: "$49/mo or $399/yr", href: "membership.html" }
 ];
 const SOCIALS = [
   { name: "YouTube", glyph: "▶", href: "https://www.youtube.com/@crappychildhoodfairy" },
@@ -321,7 +322,7 @@ class Component extends DCLogic {
       footerCols: [
         { label: "Start here", items: MENUS[0].items },
         { label: "Learn", items: MENUS[1].items.slice(0, 4) },
-        { label: "Membership", items: [{ t: "Join", href: C + "/membership" }, { t: "Log in", href: C + "/login" }] },
+        { label: "Membership", items: [{ t: "Join", href: "membership.html" }, { t: "Log in", href: C + "/login" }] },
         { label: "About", items: [...MENUS[3].items, { t: "Blog", href: "https://blog.crappychildhoodfairy.com" }] }
       ],
       email: this.state.email,

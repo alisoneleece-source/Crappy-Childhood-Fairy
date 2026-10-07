@@ -7,34 +7,29 @@
 </head>
 <body>
 <x-dc>
-<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>html{scroll-behavior:smooth}body{margin:0;background:#fbf7f2;color:#3a0f2e;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{color:#5a1846}input::placeholder{color:#8f7686}:focus-visible{outline:2px solid #c98f1f;outline-offset:3px;border-radius:6px}@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}</style><style>#annas-story{scroll-margin-top:150px}@media(min-width:1100px){#top>section:first-child p{max-width:510px!important}#top>section:first-child>div:last-child>div{max-width:46%}}</style><style>
-.about-reference-hero{min-height:min(43.77vw,745px)}
-.about-reference-portrait{position:absolute;right:0;top:0;height:min(43.77vw,745px);width:61.22%;background-image:url('assets/about-anna-reference.png');background-repeat:no-repeat;background-size:163.34% auto;background-position:right -7.64vw}
-@media(min-width:1100px){.about-reference-hero>div:last-child{max-width:1702px!important;padding:clamp(72px,7.5vw,128px) 5.6% 40px!important}.about-reference-hero>div:last-child>div{max-width:44%!important}.about-reference-hero h1{font-size:clamp(60px,6.1vw,104px)!important}.about-reference-hero p{font-size:clamp(19px,1.5vw,26px)!important;line-height:1.5!important}}
-@media(max-width:1099px){.about-reference-portrait{right:0;width:100%;height:76vw;max-height:570px;bottom:auto;background-size:161.8% auto;background-position:right -14vw}.about-reference-hero>div:last-child{padding:min(76vw,570px) 20px 32px!important}}
-</style></helmet>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>html{scroll-behavior:smooth}body{margin:0;background:#fbf7f2;color:#4a2545;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{color:#724f6b}input::placeholder{color:#8f7686}:focus-visible{outline:2px solid #c98f1f;outline-offset:3px;border-radius:6px}@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}</style></helmet>
 
 <header style="{{ headerStyle }}">
   <sc-if value="{{ barOn }}" hint-placeholder-val="{{ true }}">
-    <div style="position:relative;display:flex;align-items:center;justify-content:center;height:40px;padding:0 52px;background:#3a0f2e;color:#fbf7f2;font-size:14px">
-      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fbf7f2"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">Daily Practice + Q&amp;A with Anna</sc-if><sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">Q&amp;A</sc-if> · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></span></span></a>
-      <button onClick="{{ closeBar }}" aria-label="Dismiss" style="position:absolute;right:8px;top:0;width:40px;height:40px;background:none;border:none;color:#dcc6d3;font-size:18px;cursor:pointer">×</button>
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;height:40px;padding:0 52px;background:{{ ink }};color:{{ paper }};font-size:14px">
+      <a href="https://courses.crappychildhoodfairy.com/anna-pass" style="display:flex;align-items:center;gap:10px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:{{ paper }}"><span style="flex:none;width:8px;height:8px;margin-left:5px;border-radius:50%;background:#e2a93b;box-shadow:0 0 0 4px rgba(226,169,59,.25)"></span><span style="overflow:hidden;text-overflow:ellipsis"><b style="font-weight:600">LIVE</b> <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">Daily Practice + Q&amp;A with Anna</sc-if><sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">Q&amp;A</sc-if> · Oct 6 · <span style="color:#e2a93b;font-weight:600">Save your spot<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></span></span></a>
+      <button onClick="{{ closeBar }}" aria-label="Dismiss" style="position:absolute;right:8px;top:0;width:40px;height:40px;background:none;border:none;color:#e6d3de;font-size:18px;cursor:pointer">×</button>
     </div>
   </sc-if>
   <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px clamp(16px,4vw,56px)">
     <a href="index.html" style="display:block;flex:none"><img src="uploads/CrappyChildhoodFairy.png" alt="Crappy Childhood Fairy" style="{{ logoStyle }}"></a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-      <nav onMouseLeave="{{ closeMenu }}" style="display:flex;gap:6px;font-size:15px;font-weight:500;color:#5e4454">
+      <nav onMouseLeave="{{ closeMenu }}" style="display:flex;gap:6px;font-size:15px;font-weight:500;color:#5e4a5a">
         <sc-for list="{{ menus }}" as="m" hint-placeholder-count="4">
           <div onMouseEnter="{{ m.enter }}" style="position:relative">
-            <div style="{{ m.btnStyle }}">{{ m.label }}<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+            <sc-if value="{{ m.drop }}" hint-placeholder-val="{{ true }}"><div style="{{ m.btnStyle }}">{{ m.label }}<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></sc-if><sc-if value="{{ m.link }}" hint-placeholder-val="{{ false }}"><a href="{{ m.href }}" style="{{ m.btnStyle }}">{{ m.label }}</a></sc-if>
             <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
               <div style="position:absolute;top:100%;left:0;padding-top:8px;z-index:10">
-                <div style="width:280px;display:flex;flex-direction:column;padding:8px;background:#fff;border:1px solid #eadbd8;border-radius:16px;box-shadow:0 12px 32px rgba(58,15,46,.12)">
+                <div style="width:280px;display:flex;flex-direction:column;padding:8px;background:#fff;border:1px solid #ecdfe6;border-radius:16px;box-shadow:0 12px 32px rgba(74,37,69,.12)">
                   <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="3">
-                    <a href="{{ it.href }}" style="display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:10px" style-hover="background:#f6eee9">
-                      <span style="font-size:15px;font-weight:600;color:#3a0f2e">{{ it.t }}</span>
-                      <span style="font-size:13px;font-weight:400;color:#7a5f6e">{{ it.d }}</span>
+                    <a href="{{ it.href }}" style="display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:10px" style-hover="background:#f7eff3">
+                      <span style="font-size:15px;font-weight:600;color:{{ ink }}">{{ it.t }}</span>
+                      <span style="font-size:13px;font-weight:400;color:#7a6676">{{ it.d }}</span>
                     </a>
                   </sc-for>
                 </div>
@@ -44,13 +39,13 @@
         </sc-for>
       </nav>
       <div style="display:flex;gap:18px;align-items:center;font-size:15px;font-weight:500;white-space:nowrap;flex:none">
-        <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5e4454">Log in</a>
-        <a href="membership.html" style="padding:10px 20px;border:1.5px solid #3a0f2e;border-radius:999px;color:#3a0f2e">Join</a>
+        <a href="https://courses.crappychildhoodfairy.com/login" style="color:#5e4a5a">Log in</a>
+        <a href="membership.html" style="padding:10px 20px;border:1.5px solid {{ ink }};border-radius:999px;color:{{ ink }}">Join</a>
       </div>
     </sc-if>
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex;align-items:center;gap:10px">
-        <a href="membership.html" style="padding:10px 18px;border:1.5px solid #3a0f2e;border-radius:999px;font-size:15px;font-weight:600">Join</a>
+        <a href="membership.html" style="padding:10px 18px;border:1.5px solid {{ ink }};border-radius:999px;font-size:15px;font-weight:600">Join</a>
         <button onClick="{{ toggleSheet }}" aria-label="Menu" style="width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:none;cursor:pointer;padding:0">
           <span style="{{ bar1 }}"></span><span style="{{ bar2 }}"></span><span style="{{ bar3 }}"></span>
         </button>
@@ -62,133 +57,152 @@
 <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
   <div style="{{ sheetStyle }}">
     <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="4">
-      <div style="border-bottom:1px solid #eadbd8">
-        <button onClick="{{ sec.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;background:none;border:none;cursor:pointer;font-family:Newsreader,serif;font-size:26px;color:#3a0f2e;text-align:left">{{ sec.label }}<span style="{{ sec.chev }}">+</span></button>
+      <div style="border-bottom:1px solid #ecdfe6">
+        <sc-if value="{{ sec.drop }}" hint-placeholder-val="{{ true }}"><button onClick="{{ sec.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;background:none;border:none;cursor:pointer;font-family:Newsreader,serif;font-size:26px;color:{{ ink }};text-align:left">{{ sec.label }}<span style="{{ sec.chev }}">+</span></button></sc-if><sc-if value="{{ sec.link }}" hint-placeholder-val="{{ false }}"><a href="{{ sec.href }}" onClick="{{ closeSheet }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;font-family:Newsreader,serif;font-size:26px;color:{{ ink }};text-align:left;box-sizing:border-box">{{ sec.label }}</a></sc-if>
         <sc-if value="{{ sec.open }}" hint-placeholder-val="{{ false }}">
           <div style="display:flex;flex-direction:column;gap:2px;padding:0 0 16px">
             <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="3">
               <a href="{{ it.href }}" onClick="{{ closeSheet }}" style="display:flex;flex-direction:column;gap:2px;padding:12px 4px;min-height:44px;box-sizing:border-box">
-                <span style="font-size:17px;font-weight:600">{{ it.t }}</span><span style="font-size:14px;color:#7a5f6e">{{ it.d }}</span>
+                <span style="font-size:17px;font-weight:600">{{ it.t }}</span><span style="font-size:14px;color:#7a6676">{{ it.d }}</span>
               </a>
             </sc-for>
           </div>
         </sc-if>
       </div>
     </sc-for>
-    <a href="https://courses.crappychildhoodfairy.com/login" style="padding:20px 4px;font-size:17px;font-weight:600;color:#5e4454">Log in</a>
+    <a href="https://courses.crappychildhoodfairy.com/login" style="padding:20px 4px;font-size:17px;font-weight:600;color:#5e4a5a">Log in</a>
     <div style="margin-top:auto;display:flex;flex-direction:column;gap:14px;padding-top:24px">
-      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;background:#3a0f2e;color:#fbf7f2;border-radius:999px;font-size:16px;font-weight:600"><svg width="24" height="18" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#e2a93b"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#3a0f2e"></path></svg>Watch on YouTube</a>
+      <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;background:{{ ink }};color:{{ paper }};border-radius:999px;font-size:16px;font-weight:600"><svg width="24" height="18" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#e2a93b"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="{{ ink }}"></path></svg>Watch on YouTube</a>
       <div style="display:flex;justify-content:center;gap:12px">
-        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
-          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
-          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(58,15,46,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#3a0f2e"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(74,37,69,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ ink }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(74,37,69,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ ink }}"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(74,37,69,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ ink }}"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
       </div>
     </div>
   </div>
 </sc-if>
 
 <main id="top">
-  <section class="about-reference-hero" style="position:relative;overflow:hidden;background:#fbf7f2">
-    <div class="about-reference-portrait" role="img" aria-label="Anna Runkle, with softly blended background and gold flourishes"></div>
-    <div style="position:relative;max-width:1600px;margin:0 auto;box-sizing:border-box;padding:{{ aboutPad }};pointer-events:none">
-      <div style="display:flex;flex-direction:column;gap:28px;max-width:560px">
-        <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e"><span style="width:40px;height:1px;background:#c98f1f"></span>Meet the Fairy</div>
-        <h1 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(46px,6.4vw,92px);line-height:1.02;letter-spacing:-.02em;color:#4a1238">My name is<br>Anna Runkle.</h1>
-        <p style="margin:0;font-size:clamp(18px,2.1vw,21px);line-height:1.55;color:#5e4454;max-width:500px;text-wrap:pretty">I’m not a doctor or therapist. I’m someone who grew up in a rough family that was deeply affected by addiction and all the problems that tend to go with that — poverty, violence, neglect, and shame.</p>
-        <a href="#annas-story" style="pointer-events:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:24px;padding:17px 30px;background:#3a0f2e;color:#fff;border-radius:999px;font-size:19px;font-weight:600">Read my story <span aria-hidden="true">→</span></a>
-      </div>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <section style="position:relative;overflow:hidden;background:{{ paper }};padding:min(7.2vw,122px) min(5.4vw,92px) 0 min(5.64vw,96px)">
+    <div style="position:absolute;top:0;right:0;width:min(58vw,990px);aspect-ratio:1042 / 710;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 16%),linear-gradient(180deg,#000 0%,#000 84%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 16%),linear-gradient(180deg,#000 0%,#000 84%,transparent 100%);mask-composite:intersect"><image-slot id="about-hero-8" shape="rect" src="uploads/anna-about-hero-v2.png" placeholder="Photo of Anna"></image-slot></div>
+    <div style="position:relative;display:flex;flex-direction:column;pointer-events:none">
+      <div style="display:flex;align-items:center;gap:min(1.12vw,19px);font-size:min(.94vw,16px);font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#8a5a0e"><span style="width:min(3.06vw,52px);height:1.5px;background:#c98f1f"></span>Meet the Fairy</div>
+      <h1 style="margin:min(1.9vw,32px) 0 0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(46px,6.4vw,76px);line-height:1.02;letter-spacing:-.02em;color:{{ ink }}">My name is<br>Anna Runkle.</h1>
+      <p style="margin:min(2.35vw,40px) 0 0;font-size:min(1.41vw,24px);line-height:1.58;color:#5e4a5a;width:min(33vw,562px)">I’m not a doctor or therapist. I’m someone who grew up in a rough family that was deeply affected by addiction and all the problems that tend to go with that: poverty, violence, neglect, and shame.</p>
+      <a href="#story" style="pointer-events:auto;align-self:flex-start;display:flex;align-items:center;gap:min(1.2vw,20px);height:min(3.76vw,64px);padding:0 min(2.2vw,37px);margin-top:min(2.1vw,36px);border-radius:999px;background:{{ accent }};color:#fff;font-size:min(.9vw,15px);font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-sizing:border-box;transition:background .2s ease,transform .2s ease" style-hover="background:#5f3f59;transform:translateY(-1px)">Read my story<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
+    </div>
+    <div style="position:relative;display:flex;align-items:center;gap:min(1.5vw,26px);margin-top:min(1.6vw,28px);color:#b8801a"><span style="flex:1;height:2px;background:linear-gradient(90deg,rgba(184,128,26,.15),#b8801a 70%)"></span><span style="width:5px;height:5px;border-radius:50%;background:currentColor;flex:none"></span><svg style="display:block;height:min(2.9vw,50px);width:auto" viewBox="0 0 40 48" fill="currentColor"><path d="M20 0C21.5 17 23 22.5 40 24 23 25.5 21.5 31 20 48 18.5 31 17 25.5 0 24 17 22.5 18.5 17 20 0Z"></path></svg><span style="width:5px;height:5px;border-radius:50%;background:currentColor;flex:none"></span><span style="flex:1;height:2px;background:linear-gradient(90deg,#b8801a 30%,rgba(184,128,26,.15))"></span></div>
+  </section>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <section style="position:relative;overflow:hidden;background:{{ paper }}">
+    <div style="position:absolute;top:0;left:0;right:0;height:min(70vw,420px)"><image-slot id="about-hero-7m" shape="rect" src="uploads/anna-about-hero.png" placeholder="Photo of Anna"></image-slot></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,247,242,0) 0%,rgba(251,247,242,0) calc(min(70vw,420px) - 120px),{{ paper }} min(70vw,420px));pointer-events:none"></div>
+    <div style="position:relative;display:flex;flex-direction:column;gap:20px;padding:calc(min(70vw,420px) - 24px) 20px 40px;pointer-events:none">
+      <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8a5a0e"><span style="width:40px;height:1.5px;background:#c98f1f"></span>Meet the Fairy</div>
+      <h1 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(46px,6.4vw,76px);line-height:1.02;letter-spacing:-.02em;color:{{ ink }}">My name is<br>Anna Runkle.</h1>
+      <p style="margin:0;font-size:18px;line-height:1.58;color:#5e4a5a;text-wrap:pretty">I’m not a doctor or therapist. I’m someone who grew up in a rough family that was deeply affected by addiction and all the problems that tend to go with that: poverty, violence, neglect, and shame.</p>
+      <a href="#story" style="pointer-events:auto;align-self:flex-start;display:flex;align-items:center;gap:12px;height:56px;padding:0 28px;border-radius:999px;background:{{ accent }};color:#fff;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-sizing:border-box;transition:background .2s ease,transform .2s ease" style-hover="background:#5f3f59;transform:translateY(-1px)">Read my story<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:20px;color:#b8801a"><span style="flex:1;height:2px;background:linear-gradient(90deg,rgba(184,128,26,.15),#b8801a 70%)"></span><span style="width:5px;height:5px;border-radius:50%;background:currentColor;flex:none"></span><svg style="display:block;height:36px;width:auto" viewBox="0 0 40 48" fill="currentColor"><path d="M20 0C21.5 17 23 22.5 40 24 23 25.5 21.5 31 20 48 18.5 31 17 25.5 0 24 17 22.5 18.5 17 20 0Z"></path></svg><span style="width:5px;height:5px;border-radius:50%;background:currentColor;flex:none"></span><span style="flex:1;height:2px;background:linear-gradient(90deg,#b8801a 30%,rgba(184,128,26,.15))"></span></div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="story" style="max-width:1280px;margin:0 auto;box-sizing:border-box;padding:0 clamp(20px,4vw,56px) clamp(24px,4vw,40px);scroll-margin-top:100px">
+    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:28px 0 40px">
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">i.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:{{ ink }}">Growing up</span></div>
+      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">There were good things about my family too, and I was a resilient kid, but by the time I was in my 20s, the trauma of childhood was getting the better of me.</p></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #ecdfe6">
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">ii.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:{{ ink }}">My twenties</span></div>
+      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">Back then, I struggled with anxiety, depression, and chronic pain that seemed to have no cause. I yearned to be loved but kept finding myself in destructive relationships. My intense anger was pushing away friends and work opportunities and causing me to be increasingly lonely.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">I gobbled up self-help books and groups and went to 11 different therapists, but nothing seemed to help. No one seemed to understand what was wrong with me. There was no name for it.</p></div>
     </div>
   </section>
 
-  <div aria-hidden="true" style="display:flex;align-items:center;gap:22px;margin:0 clamp(20px,5.6vw,90px);height:56px"><span style="flex:1;height:1px;background:#c59baf"></span><span style="color:#dda644;font-size:11px">•</span><svg width="38" height="44" viewBox="0 0 38 44"><path fill="#dba044" d="M19 0 L21 16 L29 12 L24 19 L38 22 L24 24 L29 32 L21 28 L19 44 L17 28 L9 32 L14 24 L0 22 L14 19 L9 12 L17 16 Z"></path></svg><span style="color:#dda644;font-size:11px">•</span><span style="flex:1;height:1px;background:#c59baf"></span></div>
-  <section id="annas-story" style="max-width:1280px;margin:0 auto;box-sizing:border-box;padding:0 clamp(20px,4vw,56px) clamp(24px,4vw,40px)">
-    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0">
-      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">i.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:#4a1238">Growing up</span></div>
-      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">There were good things about my family too, and I was a resilient kid, but by the time I was in my 20s, the trauma of childhood was getting the better of me.</p></div>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #eadbd8">
-      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">ii.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:#4a1238">My twenties</span></div>
-      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">Back then, I struggled with anxiety, depression, and chronic pain that seemed to have no cause. I yearned to be loved but kept finding myself in destructive relationships. My intense anger was pushing away friends and work opportunities and causing me to be increasingly lonely.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">I gobbled up self-help books and groups and went to 11 different therapists, but nothing seemed to help. No one seemed to understand what was wrong with me. There was no name for it.</p></div>
-    </div>
-  </section>
-
-  <section style="background:linear-gradient(180deg,#f7e6d6 0%,#eed3cf 55%,#d9c0cf 100%)">
+  <section style="background:linear-gradient(180deg,#fbf7f2 0,#f3e6ee 90px,#f1e3eb 50%,#fbf7f2 100%)">
     <div style="max-width:980px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:22px;padding:clamp(56px,8vw,96px) clamp(20px,4vw,56px);text-align:center">
-      <p style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(28px,3.8vw,44px);line-height:1.2;letter-spacing:-.01em;color:#4a1238;text-wrap:balance"><span style="color:#c98f1f">“</span>No one seemed to understand what was wrong with me. There was no name for it.<span style="color:#c98f1f">”</span></p>
+      <p style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(28px,3.8vw,44px);line-height:1.2;letter-spacing:-.01em;color:{{ ink }};text-wrap:balance"><span style="color:#c98f1f">“</span>No one seemed to understand what was wrong with me. There was no name for it.<span style="color:#c98f1f">”</span></p>
     </div>
   </section>
 
   <section style="max-width:1280px;margin:0 auto;box-sizing:border-box;padding:0 clamp(20px,4vw,56px) clamp(56px,7vw,88px)">
     <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0">
-      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">iii.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:#4a1238">A name for it</span></div>
-      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">But now we know: it’s called Complex PTSD (or CPTSD) — the kind that comes from chronic exposure to intense stress, most commonly during childhood. That’s why I call it Childhood PTSD.</p><a href="quizzes.html" style="align-self:flex-start;font-size:16px;font-weight:600;color:#5a1846;text-decoration:underline;text-underline-offset:4px">Do you have Childhood PTSD? Take the quiz<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a></div>
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">iii.</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:{{ ink }}">A name for it</span></div>
+      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">But now we know: it’s called Complex PTSD (or CPTSD) — the kind that comes from chronic exposure to intense stress, most commonly during childhood. That’s why I call it Childhood PTSD.</p><a href="quizzes.html" style="align-self:flex-start;font-size:16px;font-weight:600;color:{{ accent }};text-decoration:underline;text-underline-offset:4px">Do you have Childhood PTSD? Take the quiz<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a></div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #eadbd8">
-      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">1994</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:#4a1238">Everything changed</span></div>
-      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">Everything changed for me in 1994 when I stumbled upon two techniques that unexpectedly made me feel better — dramatically better.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">Only in the past few years has the research around early trauma caught up to explain why — why these techniques worked, why therapy didn’t, and why my healing journey was so unnecessarily long.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">With that little bit of healing, I was able to, at last, begin changing the self-destructive patterns I’d learned (common for trauma survivors) and change the course of my life.</p><a href="daily-practice.html" style="align-self:flex-start;font-size:16px;font-weight:600;color:#5a1846;text-decoration:underline;text-underline-offset:4px">Learn the two techniques, free<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #ecdfe6">
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">1994</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:{{ ink }}">Everything changed</span></div>
+      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">Everything changed for me in 1994 when I stumbled upon two techniques that unexpectedly made me feel better — dramatically better.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">Only in the past few years has the research around early trauma caught up to explain why — why these techniques worked, why therapy didn’t, and why my healing journey was so unnecessarily long.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">With that little bit of healing, I was able to, at last, begin changing the self-destructive patterns I’d learned (common for trauma survivors) and change the course of my life.</p><a href="daily-practice.html" style="align-self:flex-start;font-size:16px;font-weight:600;color:{{ accent }};text-decoration:underline;text-underline-offset:4px">Learn the two techniques, free<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a></div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #eadbd8">
-      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">2016</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:#4a1238">The Fairy is born</span></div>
-      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">It wasn’t long before I was teaching others — at first informally and one-on-one — the methods I used to heal. By 2016 I had so many people seeking instruction that I made my first online video and then an online course, and this is how Crappy Childhood Fairy was born.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3542;text-wrap:pretty">Today, almost a million people follow my work and participate in my training. My mission is to change the paradigm of what’s possible for people like us and to help all I can to heal and lead lives of joy and purpose.</p></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 56px;padding:40px 0;border-top:1px solid #ecdfe6">
+      <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Newsreader,serif;font-style:italic;font-size:22px;color:#a06c12">2016</span><span style="font-family:Newsreader,serif;font-size:clamp(24px,2.6vw,28px);line-height:1.2;color:{{ ink }}">The Fairy is born</span></div>
+      <div style="flex:3 1 480px;display:flex;flex-direction:column;gap:18px;max-width:700px"><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">It wasn’t long before I was teaching others — at first informally and one-on-one — the methods I used to heal. By 2016 I had so many people seeking instruction that I made my first online video and then an online course, and this is how Crappy Childhood Fairy was born.</p><p style="margin:0;font-size:clamp(17px,1.9vw,19px);line-height:1.7;color:#4a3a47;text-wrap:pretty">Today, almost a million people follow my work and participate in my training. My mission is to change the paradigm of what’s possible for people like us and to help all I can to heal and lead lives of joy and purpose.</p></div>
     </div>
   </section>
 
-  <section style="background:#3a0f2e;color:#fbf7f2">
+  <section style="background:#f3e8ee;color:{{ ink }}">
     <div style="max-width:1280px;margin:0 auto;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:32px 64px;padding:clamp(56px,7vw,80px) clamp(20px,4vw,56px)">
       <div style="flex:1 1 240px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#e2a93b">Today</div>
-        <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(40px,5vw,60px);line-height:1.05">A little more<br>about <span style="color:#e2a93b;font-style:italic">me</span></h2>
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a5a0e">Today</div>
+        <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(40px,5vw,60px);line-height:1.05">A little more<br>about <span style="color:#a06c12;font-style:italic">me</span></h2>
       </div>
       <div style="flex:2 1 520px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(240px,calc(50% - 8px))),1fr));gap:16px">
-        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid rgba(251,247,242,.16);border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e2a93b">Education</span><span style="font-size:16px;line-height:1.55;color:#e6d3dd">Master of Public Policy, The Goldman School, University of California, Berkeley</span></div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid rgba(251,247,242,.16);border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e2a93b">Before the Fairy</span><span style="font-size:16px;line-height:1.55;color:#e6d3dd">Professional comedian, customer experience consultant and video director</span></div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid rgba(251,247,242,.16);border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e2a93b">Home</span><span style="font-size:16px;line-height:1.55;color:#e6d3dd">The San Francisco Bay Area, with my husband and two college-age sons</span></div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid rgba(251,247,242,.16);border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e2a93b">Now</span><span style="font-size:16px;line-height:1.55;color:#e6d3dd">Full-time as “The Fairy,” leading the company and a team of great people</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;background:#fff;border:1px solid #ecdfe6;border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8a5a0e">Education</span><span style="font-size:16px;line-height:1.55;color:#5e4a5a">Master of Public Policy, The Goldman School, University of California, Berkeley</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;background:#fff;border:1px solid #ecdfe6;border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8a5a0e">Before the Fairy</span><span style="font-size:16px;line-height:1.55;color:#5e4a5a">Professional comedian, customer experience consultant and video director</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;background:#fff;border:1px solid #ecdfe6;border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8a5a0e">Home</span><span style="font-size:16px;line-height:1.55;color:#5e4a5a">The San Francisco Bay Area, with my husband and two college-age sons</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:24px;background:#fff;border:1px solid #ecdfe6;border-radius:16px"><span style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8a5a0e">Now</span><span style="font-size:16px;line-height:1.55;color:#5e4a5a">Full-time as “The Fairy,” leading the company and a team of great people</span></div>
       </div>
     </div>
   </section>
 
   <section style="max-width:1280px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(56px,7vw,88px) clamp(20px,4vw,56px);text-align:center">
-    <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.1;color:#4a1238;text-wrap:balance">Start where I started.</h2>
-    <p style="margin:0;max-width:520px;font-size:17px;line-height:1.55;color:#5e4454">The same two techniques that changed my life are free to learn today.</p>
+    <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.1;color:{{ ink }};text-wrap:balance">Start where I started.</h2>
+    <p style="margin:0;max-width:520px;font-size:17px;line-height:1.55;color:#5e4a5a">The same two techniques that changed my life are free to learn today.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px">
-      <a href="daily-practice.html" style="display:flex;align-items:center;gap:12px;padding:18px 28px;background:#5a1846;color:#fff;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#4a1238;transform:translateY(-1px);box-shadow:0 8px 20px rgba(58,15,46,.18)">Try the Daily Practice</a>
-      <a href="quizzes.html" style="display:flex;align-items:center;gap:12px;padding:18px 28px;border:1.5px solid #5a1846;color:#5a1846;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#f1e6e2">Take the quiz</a>
+      <a href="daily-practice.html" style="display:flex;align-items:center;gap:12px;padding:18px 28px;background:{{ accent }};color:#fff;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:{{ ink }};transform:translateY(-1px);box-shadow:0 8px 20px rgba(74,37,69,.18)">Try the Daily Practice</a>
+      <a href="quizzes.html" style="display:flex;align-items:center;gap:12px;padding:18px 28px;border:1.5px solid {{ accent }};color:{{ accent }};border-radius:999px;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#f3e8ee">Take the quiz</a>
     </div>
-    <div style="margin-top:28px;max-width:640px;padding:20px 24px;border:1px solid #eadbd8;border-radius:16px;background:#fff;font-size:15px;line-height:1.55;color:#4a3542">If you’re in danger, or if you’re thinking of hurting yourself, please reach out now: call or text <b style="color:#3a0f2e">988</b> (US) or find a local line at <a href="https://findahelpline.com" style="color:#5a1846;font-weight:600;text-decoration:underline">findahelpline.com</a>. Your life is important and your safety matters.</div>
   </section>
 </main>
 
 <sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
   <div onClick="{{ closeVideo }}" style="position:fixed;inset:0;z-index:100;background:rgba(30,8,24,.82);display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,48px)">
     <div onClick="{{ stop }}" style="width:100%;max-width:980px;display:flex;flex-direction:column;gap:14px">
-      <div style="display:flex;justify-content:space-between;align-items:center;color:#fbf7f2">
+      <div style="display:flex;justify-content:space-between;align-items:center;color:{{ paper }}">
         <span style="font-family:Newsreader,serif;font-size:clamp(20px,2.4vw,26px)">How I healed from a crappy childhood</span>
-        <button onClick="{{ closeVideo }}" aria-label="Close video" style="width:44px;height:44px;flex:none;border-radius:50%;border:1.5px solid rgba(251,247,242,.4);background:transparent;color:#fbf7f2;font-size:20px;cursor:pointer">×</button>
+        <button onClick="{{ closeVideo }}" aria-label="Close video" style="width:44px;height:44px;flex:none;border-radius:50%;border:1.5px solid rgba(251,247,242,.4);background:transparent;color:{{ paper }};font-size:20px;cursor:pointer">×</button>
       </div>
       <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000">
         <iframe src="https://www.youtube-nocookie.com/embed/K_46GEbc9WY?autoplay=1&amp;rel=0&amp;modestbranding=1" title="Anna’s story" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen="allowfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
       </div>
       <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
-        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:#3a0f2e;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
-        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#dcc6d3">More videos on YouTube<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
+        <a href="#start" onClick="{{ closeVideo }}" style="display:flex;align-items:center;gap:10px;padding:18px 28px;background:#e2a93b;color:{{ ink }};border-radius:999px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Find where to start<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="font-size:14px;color:#e6d3de">More videos on YouTube<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="display:inline-block;vertical-align:-0.14em;margin-left:.4em;flex:none"><path d="M3 21 L14.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M17 2.5 L18.1 5.4 L21.2 5.6 L18.8 7.6 L19.6 10.6 L17 8.9 L14.4 10.6 L15.2 7.6 L12.8 5.6 L15.9 5.4 Z" fill="currentColor"></path></svg></a>
       </div>
     </div>
   </div>
 </sc-if>
 
-<footer style="background:#3a0f2e;color:#fbf7f2">
+<aside style="max-width:1280px;margin:0 auto;box-sizing:border-box;padding:0 clamp(20px,4vw,56px) clamp(40px,5vw,56px)">
+  <div style="display:flex;flex-wrap:wrap;gap:10px 28px;padding:22px clamp(20px,3vw,32px);background:#f3e8ee;border-radius:16px;color:#4a3a47">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a5a0e;padding-top:3px">Please read</span>
+    <p style="margin:0;flex:1 1 480px;font-size:15px;line-height:1.6;text-wrap:pretty">The information here is for educational purposes only. My team and I aren’t doctors or therapists. If you’re in crisis or need help, call or text <strong>988</strong> (US Suicide &amp; Crisis Lifeline), reach out to a mental health professional, or contact emergency services. Your life is important, and your safety matters.</p>
+  </div>
+</aside>
+
+<footer style="background:{{ ink }};color:{{ paper }}">
   <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,3.5vw,40px);padding:clamp(48px,6vw,64px) clamp(20px,4vw,56px) 28px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:end">
       <div style="display:flex;flex-direction:column;gap:12px">
         <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e2a93b">The newsletter</div>
         <h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,3.6vw,40px);line-height:1.1">Join 175,000 readers.</h2>
-        <p style="margin:0;font-size:17px;line-height:1.5;color:#dcc6d3;max-width:440px">A short weekly note from Anna with one tool you can use right away.</p>
+        <p style="margin:0;font-size:17px;line-height:1.5;color:#e6d3de;max-width:440px">A short weekly note from Anna with one tool you can use right away.</p>
       </div>
       <sc-if value="{{ notSubscribed }}" hint-placeholder-val="{{ true }}">
         <form onSubmit="{{ subscribe }}" style="display:flex;flex-wrap:wrap;gap:10px">
-          <input type="email" required="required" placeholder="Your email address" value="{{ email }}" onChange="{{ setEmail }}" style="flex:1 1 240px;min-width:0;height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid rgba(251,247,242,.3);background:rgba(251,247,242,.06);color:#fbf7f2;font:500 16px Figtree,system-ui,sans-serif;outline:none">
-          <button type="submit" style="height:56px;padding:0 28px;border:none;border-radius:999px;background:#e2a93b;color:#3a0f2e;font:700 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Subscribe</button>
+          <input type="email" required="required" placeholder="Your email address" value="{{ email }}" onChange="{{ setEmail }}" style="flex:1 1 240px;min-width:0;height:56px;box-sizing:border-box;padding:0 22px;border-radius:999px;border:1.5px solid rgba(251,247,242,.3);background:rgba(251,247,242,.06);color:{{ paper }};font:500 16px Figtree,system-ui,sans-serif;outline:none">
+          <button type="submit" style="height:56px;padding:0 28px;border:none;border-radius:999px;background:#e2a93b;color:{{ ink }};font:700 15px Figtree,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s ease,transform .2s ease,box-shadow .2s ease" style-hover="background:#efb84c;transform:translateY(-1px)">Subscribe</button>
         </form>
       </sc-if>
       <sc-if value="{{ subscribed }}" hint-placeholder-val="{{ false }}">
@@ -199,10 +213,10 @@
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid rgba(251,247,242,.14);border-bottom:1px solid rgba(251,247,242,.14)">
       <a href="index.html" style="display:block;flex:none"><img src="uploads/CCF-logo-footer-white.png" alt="Crappy Childhood Fairy" style="display:block;height:92px;margin:-22px 0 -22px -8px"></a>
       <div style="display:flex;align-items:center;gap:10px">
-        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 14px;border-radius:999px;background:#e2a93b;color:#3a0f2e;font-size:15px;font-weight:700" style-hover="background:#efb84c;transform:translateY(-1px)"><svg width="22" height="16" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="#3a0f2e"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#e2a93b"></path></svg>YouTube</a>
-        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
-          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
-          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fbf7f2" style-hover="background:#e2a93b;color:#3a0f2e;border-color:#e2a93b"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
+        <a href="https://www.youtube.com/@crappychildhoodfairy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 14px;border-radius:999px;background:#e2a93b;color:{{ ink }};font-size:15px;font-weight:700" style-hover="background:#efb84c;transform:translateY(-1px)"><svg width="22" height="16" viewBox="0 0 24 18"><rect width="24" height="18" rx="5" fill="{{ ink }}"></rect><path d="M9.5 5 L16 9 L9.5 13 Z" fill="#e2a93b"></path></svg>YouTube</a>
+        <a href="https://www.instagram.com/crappychildhoodfairy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ paper }}" style-hover="background:#e2a93b;color:{{ ink }};border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"></circle></svg></a>
+          <a href="https://www.facebook.com/CrappyChildhoodFairy/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ paper }}" style-hover="background:#e2a93b;color:{{ ink }};border-color:#e2a93b"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V9c0-.6.4-1 1-1z" fill="currentColor"></path></svg></a>
+          <a href="https://twitter.com/cchildhoodfairy" target="_blank" rel="noopener" aria-label="X / Twitter" title="X / Twitter" style="width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(251,247,242,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:{{ paper }}" style-hover="background:#e2a93b;color:{{ ink }};border-color:#e2a93b"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4l6.8 9.1L4.3 20h1.8l5.6-6 4.5 6H20l-7.1-9.6L19 4h-1.8l-5.2 5.6L7.8 4z" fill="currentColor"></path></svg></a>
       </div>
       <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;font-size:14px;letter-spacing:.02em">
         <sc-for list="{{ footerLinks }}" as="it" hint-placeholder-count="5">
@@ -212,27 +226,25 @@
     </div>
 
     <div style="display:flex;flex-direction:column;gap:6px;margin-top:-8px;font-size:13px;line-height:1.55;color:#bda3b3">
-      <p style="margin:0;color:#fbf7f2;font-size:14px">In crisis? Call or text <b>988</b> (US) or find a local line at findahelpline.com. Your safety matters.</p>
-      <p style="margin:0">Educational content only — not a substitute for professional care.</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:6px">
         <span>© 2026 Crappy Childhood Fairy</span>
         <div style="display:flex;flex-wrap:wrap;gap:8px 22px">
-          <a href="https://courses.crappychildhoodfairy.com/terms-of-service" style="color:#dcc6d3">Terms of Service</a>
-          <a href="https://courses.crappychildhoodfairy.com/privacy-policy" style="color:#dcc6d3">Privacy Policy</a>
-          <a href="https://crappychildhoodfairy.com/disclaimer/" style="color:#dcc6d3">Disclaimer</a>
+          <a href="https://courses.crappychildhoodfairy.com/terms-of-service" style="color:#e6d3de">Terms of Service</a>
+          <a href="https://courses.crappychildhoodfairy.com/privacy-policy" style="color:#e6d3de">Privacy Policy</a>
+          <a href="https://crappychildhoodfairy.com/disclaimer/" style="color:#e6d3de">Disclaimer</a>
         </div>
       </div>
     </div>
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;paper&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#fbf7f2&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colors&quot;,&quot;label&quot;:&quot;Page background&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4a2545&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colors&quot;,&quot;label&quot;:&quot;Text &amp; headings&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#724f6b&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colors&quot;,&quot;label&quot;:&quot;Buttons &amp; bands&quot;}}">
 const C = "https://courses.crappychildhoodfairy.com";
 const MENUS = [
-  { label: "Start here", items: [{ t: "Take the CPTSD quiz", d: "3 minutes, private", href: "quizzes.html" }, { t: "Free Daily Practice", d: "Writing + meditation, free Zoom calls", href: "daily-practice.html" }, { t: "Free tools", d: "Quizzes and worksheets", href: C + "/free-tools" }] },
+  { label: "Start here", items: [{ t: "Take the CPTSD quiz", d: "3 minutes, private", href: "quizzes.html" }, { t: "Free Daily Practice", d: "Writing + meditation, free Zoom calls", href: "daily-practice.html" }, { t: "Dysregulation quiz", d: "Signs trauma is affecting your nervous system", href: C + "/dysregulation-quiz" }, { t: "Connection quiz", d: "How trauma shows up in your relationships", href: C + "/connection-quiz" }, { t: "ACE survey", d: "Your adverse childhood experiences score", href: "https://www.crappychildhoodfairy.com/the-ace-survey" }, { t: "Dysregulation emergency measures", d: "Free worksheet", href: C + "/dysreg-signs-emergency-measures" }] },
   { label: "Learn", items: [{ t: "Courses", d: "Self-paced, from $70", href: "courses.html" }, { t: "Live courses with Anna", d: "Small-group intensives", href: C + "/8w-rr-intensive" }, { t: "Webinars", d: "Monthly, $45 · free for members", href: "webinars.html" }, { t: "Books", d: "Re-Regulated & Connectability", href: "books.html" }, { t: "Videos & blog", d: "Free, new every week", href: "https://www.youtube.com/@crappychildhoodfairy" }] },
-  { label: "Membership", items: [{ t: "What’s included", d: "All courses, Q&A calls, community", href: "membership.html" }, { t: "Plans & pricing", d: "$49/mo or $399/yr", href: "membership.html" }] },
-  { label: "About Anna", items: [{ t: "My story", d: "How I healed my Childhood PTSD", href: "about-anna.html" }, { t: "Write to Anna", d: "Questions and contact", href: "write-to-anna.html" }] }
+  { label: "Membership", href: "membership.html", items: [] },
+  { label: "About Anna", items: [{ t: "My story", d: "How I healed my Childhood PTSD", href: "about-anna.html" }, { t: "Ask the Fairy", d: "Write Anna a letter", href: "write-to-anna.html" }] }
 ];
 const PATHS = [
   { label: "I’m wondering if this is even me", title: "Take the CPTSD quiz", body: "A private 3-minute check of the most common signs that early trauma is affecting you now — with a plain-English explanation of your results.", cta: "Start the quiz", meta: "Free · 3 min", href: "quizzes.html" },
@@ -260,24 +272,26 @@ class Component extends DCLogic {
   componentWillUnmount() { this.io && this.io.disconnect(); window.removeEventListener("resize", this.onResize); window.removeEventListener("scroll", this.onScroll); }
   renderVals() {
     const { w, scrolled, menu, sheet, sec, sel } = this.state;
+    const paper = this.props.paper ?? "#fbf7f2", ink = this.props.ink ?? "#4a2545", accent = this.props.accent ?? "#724f6b";
     const mobile = w < 1100;
-    const bar = { width: 22, height: 2, background: "#3a0f2e", borderRadius: 2, transition: "all .25s ease" };
+    const bar = { width: 22, height: 2, background: ink, borderRadius: 2, transition: "all .25s ease" };
     return {
+      paper, ink, accent,
       videoOpen: this.state.video,
       openVideo: () => this.setState({ video: true }),
       closeVideo: () => this.setState({ video: false }),
       stop: e => e.stopPropagation(),
-      aboutPhoto: mobile ? { position: "absolute", top: 0, left: 0, right: 0, height: "min(70vw,420px)" } : { position: "absolute", top: "12%", right: "5%", bottom: "10%", width: "42%", WebkitMaskImage: "radial-gradient(ellipse 84% 83% at 67% 43%, #000 48%, transparent 94%)", maskImage: "radial-gradient(ellipse 84% 83% at 67% 43%, #000 48%, transparent 94%)" },
-      aboutPad: mobile ? "calc(min(70vw,420px) - 24px) 20px 48px" : "clamp(80px,8vw,120px) clamp(40px,5.6vw,90px) 64px",
+      aboutPhoto: mobile ? { position: "absolute", top: 0, left: 0, right: 0, height: "min(70vw,420px)" } : { position: "absolute", top: 0, right: 0, width: "min(61%,1100px)", aspectRatio: "1042 / 710", WebkitMaskImage: "linear-gradient(180deg,#000 85%,transparent 100%)", maskImage: "linear-gradient(180deg,#000 85%,transparent 100%)" },
+      aboutPad: mobile ? "calc(min(70vw,420px) - 24px) 20px 48px" : "clamp(80px,9vw,120px) 56px",
       aboutFade: mobile
         ? { position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(251,247,242,0) 0%,rgba(251,247,242,0) calc(min(70vw,420px) - 120px),#fbf7f2 min(70vw,420px))", pointerEvents: "none" }
-        : { position: "absolute", top: "12%", right: "5%", bottom: "10%", width: "42%", background: "linear-gradient(90deg,#fbf7f2 0%,rgba(251,247,242,0) 34%),linear-gradient(180deg,#fbf7f2 0%,rgba(251,247,242,0) 12%,rgba(251,247,242,0) 82%,#fbf7f2 100%)", pointerEvents: "none" },
+        : { display: "none" },
       barOn: this.state.bar,
       closeBar: () => this.setState({ bar: false }),
-      sheetStyle: { position: "fixed", top: this.state.bar ? 108 : 68, left: 0, right: 0, bottom: 0, zIndex: 49, background: "#fbf7f2", overflowY: "auto", display: "flex", flexDirection: "column", padding: "8px 20px 32px" },
+      sheetStyle: { position: "fixed", top: this.state.bar ? 108 : 68, left: 0, right: 0, bottom: 0, zIndex: 49, background: paper, overflowY: "auto", display: "flex", flexDirection: "column", padding: "8px 20px 32px" },
       isMobile: mobile, isDesktop: !mobile, sheetOpen: mobile && sheet,
-      headerStyle: { position: "sticky", top: 0, zIndex: 50, background: scrolled || sheet ? "rgba(251,247,242,.94)" : "#fbf7f2", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderBottom: scrolled ? "1px solid #eadbd8" : "1px solid transparent", boxShadow: scrolled ? "0 6px 24px rgba(58,15,46,.06)" : "none", transition: "all .25s ease" },
-      logoStyle: { height: mobile ? 76 : (scrolled ? 100 : 126), margin: mobile ? "-14px 0 -14px -6px" : (scrolled ? "-20px 0 -20px -10px" : "-26px 0 -26px -12px"), display: "block", transition: "all .25s ease" },
+      headerStyle: { position: "sticky", top: 0, zIndex: 50, background: scrolled || sheet ? "rgba(251,247,242,.94)" : paper, backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderBottom: scrolled ? "1px solid #ecdfe6" : "1px solid transparent", boxShadow: scrolled ? "0 6px 24px rgba(74,37,69,.06)" : "none", transition: "all .25s ease" },
+      logoStyle: { height: mobile ? 76 : 126, margin: mobile ? "-14px 0 -14px -6px" : "-26px 0 -26px -12px", display: "block", transform: !mobile && scrolled ? "scale(.8)" : "none", transformOrigin: "left center", transition: "transform .25s ease" },
       bar1: { ...bar, transform: sheet ? "translateY(7px) rotate(45deg)" : "none" },
       bar2: { ...bar, opacity: sheet ? 0 : 1 },
       bar3: { ...bar, transform: sheet ? "translateY(-7px) rotate(-45deg)" : "none" },
@@ -286,19 +300,19 @@ class Component extends DCLogic {
       closeMenu: () => this.setState({ menu: null }),
       menus: MENUS.map((m, i) => {
         const open = menu === i;
-        return { ...m, open, enter: () => this.setState({ menu: i }),
-          btnStyle: { display: "flex", alignItems: "center", gap: 6, whiteSpace: "nowrap", padding: "10px 14px", borderRadius: 999, cursor: "pointer", background: open ? "#f1e6e2" : "transparent", color: open ? "#3a0f2e" : "#5e4454" } };
+        return { ...m, open: open && m.items.length > 0, drop: m.items.length > 0, link: !m.items.length, enter: () => this.setState({ menu: i }),
+          btnStyle: { display: "flex", alignItems: "center", gap: 6, whiteSpace: "nowrap", padding: "10px 14px", borderRadius: 999, cursor: "pointer", background: open ? "#f3e8ee" : "transparent", color: open ? ink : "#5e4a5a" } };
       }),
-      sections: MENUS.map((m, i) => ({ ...m, open: sec === i, toggle: () => this.setState({ sec: sec === i ? null : i }),
+      sections: MENUS.map((m, i) => ({ ...m, drop: m.items.length > 0, link: !m.items.length, open: sec === i && m.items.length > 0, toggle: () => this.setState({ sec: sec === i ? null : i }),
         chev: { fontFamily: "Figtree, sans-serif", fontSize: 26, color: "#c98f1f", transition: "transform .25s ease", transform: sec === i ? "rotate(45deg)" : "none" } })),
       cards: PATHS.map((d, i) => {
         const on = i === sel;
         return { num: ["i.", "ii.", "iii."][i], label: d.label, pick: () => this.setState({ sel: i }),
           style: { display: "flex", flexDirection: "column", gap: 18, padding: 28, minHeight: mobile ? 0 : 130, borderRadius: 20, cursor: "pointer", transition: "all .25s ease",
-            background: on ? "#fff" : "rgba(255,255,255,.4)", border: on ? "1.5px solid #5a1846" : "1px solid rgba(58,15,46,.16)",
-            boxShadow: on ? "0 14px 34px rgba(58,15,46,.10)" : "none", transform: on ? "translateY(-2px)" : "none" },
+            background: on ? "#f7eff3" : "#fff", border: on ? "1.5px solid #724f6b" : "1.5px solid #ecdfe6", outline: "none",
+            boxShadow: "none", transform: "none" },
           dot: { width: 18, height: 18, borderRadius: "50%", boxSizing: "border-box", transition: "all .25s ease",
-            border: on ? "1.5px solid #5a1846" : "1.5px solid rgba(58,15,46,.3)", background: on ? "#5a1846" : "transparent", boxShadow: on ? "inset 0 0 0 3px #fff" : "none" } };
+            border: on ? "1.5px solid #724f6b" : "1.5px solid rgba(74,37,69,.3)", background: on ? accent : "transparent", boxShadow: on ? "inset 0 0 0 3px #f7eff3" : "none" } };
       }),
       rec: PATHS[sel],
       socials: SOCIALS,
